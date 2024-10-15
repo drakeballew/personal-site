@@ -208,7 +208,7 @@ function Resume() {
       },
     },
     {
-      company: 'Practice Health',
+      company: 'Practice Healthy',
       title: 'Founder',
       logo: logoPracticeHealth,
       start: '2021',
