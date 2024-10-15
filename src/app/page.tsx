@@ -288,8 +288,8 @@ export default async function Home() {
             Curious about how it all fits together in a connected world.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Drake, a coder-chef-photographer aspiring poet-gardener based on the West Coast.
-            Currently, I am exploring my interests in food, nutrition, and technology with OpenRecipe.
+            I’m Drake, a West Coast coder-chef-photographer and aspiring poet-gardener hobbyist
+            currently exploring my interests in food, nutrition, and technology with <a href="https://www.openrecipe.ai" target="_blank">OpenRecipe</a>.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
