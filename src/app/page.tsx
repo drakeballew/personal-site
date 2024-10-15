@@ -13,7 +13,7 @@ import {
 } from '@/components/SocialIcons'
 import logoOpenRecipe from '@/images/logos/openrecipe-logo.svg'
 import logoPacaya from '@/images/logos/pacaya-logo.svg'
-import logoPlastiq from '@/images/logos/plastiq-logo.svg'
+import logoPlastiq from '@/images/logos/white-plastiq-logo.svg'
 import logoEaze from '@/images/logos/eaze-logo.svg'
 import Eaze from '@/images/logos/white-eaze-logo.svg'
 import logoPracticeHealth from '@/images/logos/practice-health-logo.svg'
