@@ -15,7 +15,6 @@ import logoOpenRecipe from '@/images/logos/openrecipe-logo.svg'
 import logoPacaya from '@/images/logos/pacaya-logo.svg'
 import logoPlastiq from '@/images/logos/plastiq-logo.svg'
 import logoEaze from '@/images/logos/eaze-logo.svg'
-import Eaze from '@/images/logos/Eaze.svg'
 import logoPracticeHealth from '@/images/logos/practice-health-logo.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -209,7 +208,7 @@ function Resume() {
       },
     },
     {
-      company: 'Practice Healthy',
+      company: 'Practice Health',
       title: 'Founder',
       logo: logoPracticeHealth,
       start: '2021',
@@ -225,7 +224,7 @@ function Resume() {
     {
       company: 'Eaze',
       title: 'Senior Growth Manager',
-      logo: Eaze,
+      logo: logoEaze,
       start: '2015',
       end: '2017',
     },
