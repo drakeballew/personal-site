@@ -15,6 +15,7 @@ import logoOpenRecipe from '@/images/logos/openrecipe-logo.svg'
 import logoPacaya from '@/images/logos/pacaya-logo.svg'
 import logoPlastiq from '@/images/logos/plastiq-logo.svg'
 import logoEaze from '@/images/logos/eaze-logo.svg'
+import Eaze from '@/images/logos/eaze.svg'
 import logoPracticeHealth from '@/images/logos/practice-health-logo.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -224,7 +225,7 @@ function Resume() {
     {
       company: 'Eaze',
       title: 'Senior Growth Manager',
-      logo: logoEaze,
+      logo: Eaze,
       start: '2015',
       end: '2017',
     },
