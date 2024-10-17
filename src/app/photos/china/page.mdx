@@ -1,0 +1,33 @@
+import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
+import designSystem from './photo.jpg'
+
+export const article = {
+  author: 'Drake Ballew',
+  date: '2010-08-15',
+  title: 'China',
+  description: 'Four years in China',
+  content: (
+    <div>
+      <p>
+        During my four years in China, I experienced a rich and diverse culture. Here are some of the highlights from my journey.
+      </p>
+    </div>
+  ),
+}
+
+export const gallery = {
+  images: [
+    { src: designSystem.src, alt: 'Great Wall of China' },
+    { src: designSystem.src, alt: 'Forbidden City' },
+    { src: designSystem.src, alt: 'Shanghai Skyline' },
+  ],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+
+Photos of China
