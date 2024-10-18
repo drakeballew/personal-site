@@ -130,14 +130,14 @@ export default function Photos() {
         <PhotosSection title="North America">
         <Appearance
             href="/photos/us-roadtrip-2009"
-            title="Roadtrip 2009"
+            title="Western States Roadtrip"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
             tripDate="Jul 2009"
             cta="View photos"
           />
         <Appearance
             href="/photos/us-roadtrip-2011"
-            title="Roadtrip 2011"
+            title="The Great American Roadtrip"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
             tripDate="July 2011"
             cta="View photos"
@@ -149,11 +149,25 @@ export default function Photos() {
             tripDate="2014-2021"
             cta="View photos"
           />
+          <Appearance
+            href="/photos/central-america"
+            title="Backpacking Central America"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Mar 2017"
+            cta="View photos"
+          />
         <Appearance
             href="/photos/new-orleans"
             title="New Orleans"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
             tripDate="Jan 2018"
+            cta="View photos"
+          />
+          <Appearance
+            href="/photos/mexico-city"
+            title="Mexico City"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Oct 2019"
             cta="View photos"
           />
         </PhotosSection>

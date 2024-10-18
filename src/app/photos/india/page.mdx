@@ -1,15 +1,24 @@
 import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
-import designSystem from './photo.jpg'
+
+import image1 from './image-1.JPG'
+import image2 from './image-2.JPG'
+import image3 from './image-3.JPG'
+import image4 from './image-4.JPG'
+import image5 from './image-5.JPG'
+import image6 from './image-6.JPG'
+import image7 from './image-7.JPG'
+import image8 from './image-8.JPG'
+import image9 from './image-9.JPG'
 
 export const article = {
   author: 'Drake Ballew',
-  date: '2010-08-15',
-  title: 'India',
-  description: 'Four years in China',
+  date: '2017-03-15',
+  title: 'Two Weeks in India',
+  description: 'Description text',
   content: (
     <div>
       <p>
-        During my four years in China, I experienced a rich and diverse culture. Here are some of the highlights from my journey.
+        Little description
       </p>
     </div>
   ),
@@ -17,9 +26,15 @@ export const article = {
 
 export const gallery = {
   images: [
-    { src: designSystem.src, alt: 'Great Wall of China' },
-    { src: designSystem.src, alt: 'Forbidden City' },
-    { src: designSystem.src, alt: 'Shanghai Skyline' },
+    { src: image1.src, alt: 'Description for image 1' },
+    { src: image2.src, alt: 'Description for image 2' },
+    { src: image3.src, alt: 'Description for image 3' },
+    { src: image4.src, alt: 'Description for image 4' },
+    { src: image5.src, alt: 'Description for image 5' },
+    { src: image6.src, alt: 'Description for image 6' },
+    { src: image7.src, alt: 'Description for image 7' },
+    { src: image8.src, alt: 'Description for image 8' },
+    { src: image9.src, alt: 'Description for image 9' },
   ],
 }
 
@@ -29,5 +44,3 @@ export const metadata = {
 }
 
 export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
-
-Photos of China
