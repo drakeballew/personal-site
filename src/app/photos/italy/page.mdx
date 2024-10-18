@@ -1,12 +1,40 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
-import designSystem from './planetaria-design-system.png'
+import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
+import image1 from './image-1.jpg'
+import image2 from './image-2.jpg'
+import image3 from './image-3.jpg'
+import image4 from './image-4.jpg'
+import image5 from './image-5.jpg'
+import image6 from './image-6.jpg'
+import image7 from './image-7.jpg'
+import image8 from './image-8.gif'
+import image9 from './image-9.jpg'
 
 export const article = {
   author: 'Drake Ballew',
-  date: '2024-10-15',
-  title: 'Reaction & Response',
-  description:
-    'Creating meaning from the chaos that makes up a human life.',
+  date: '2016-08-15',
+  title: 'Rome, Florence, and the Amalfi Coast',
+  description: 'Description text',
+  content: (
+    <div>
+      <p>
+        Little description
+      </p>
+    </div>
+  ),
+}
+
+export const gallery = {
+  images: [
+    { src: image1.src, alt: 'On the shore of Qinghai Lake' },
+    { src: image2.src, alt: 'Covered up from the Tibetan Plateau sun' },
+    { src: image3.src, alt: 'Flying a kite on the Nanjing city walls' },
+    { src: image4.src, alt: 'Hiking a dilapidated section of The Great Wall' },
+    { src: image5.src, alt: 'Sun Yat Sen\'s Mausoleum on a rainy day' },
+    { src: image6.src, alt: 'A small hillside temple in Sichuan' },
+    { src: image7.src, alt: 'Young monks outside Labrang Monastery' },
+    { src: image8.src, alt: 'Horses taking a break in the fields of Gansu Province' },
+    { src: image9.src, alt: 'All smiles in Urumqi' },
+  ],
 }
 
 export const metadata = {
@@ -14,56 +42,4 @@ export const metadata = {
   description: article.description,
 }
 
-export default (props) => <ArticleLayout article={article} {...props} />
-
->*“The process is fearless,” Maddon said. “If you want to always live your life just based on the outcome, you’re going to be fearful a lot. And when you’re doing that, you’re really not living in a particular moment.*
->
->“I’m 60, I’ll be 80, and if by the time I’m 80 20 years from now I’ve just been worried about outcomes, I’m going to miss a lot. So you’ve really got to get involved in the process. And from our players’ perspective, that’s all I talk about. I’ve not even mentioned winning one time to these guys.*
->
->*“It’s just about…if you take care of the seconds, the minutes, then the hours in a day take care of themselves. So for our fans back home, please go ahead and be worried. That’s OK. But understand that from our perspective in the clubhouse, we’re more worried about the process than the outcome.”*[^0]
->
->Former Cubs manager Joe Maddon after losing Game 1 to St Louis in the 2015 NLDS. The Cubs would go on to lose the series in six games, but won the World Series for the first time in 108 years the following year.
-
-**There are a lot of ways to attempt to model a human life**. Some people like to think of it as a game, others a path, yet others a great comedy or drama, and still others a small cycle within a much larger cycle of death and rebirth. Each attempted model has its unique flaws and merits, and of course none totally succeed in explaining the endless complexity of the human experience within a universe we understand far less than we understand ourselves.
-
-But what most if not all of these models share is the concept of life being a series of events that compound upon one another to create what we call lived experience.
-
-A major thread within traditional religious thought is the acceptance of our inability to control the events that shape our lives. Financial catastrophes bankrupt hardworking families, children die young, innocent people are murdered, and the wheel turns. All types of malady and injustice are seemingly mercilessly wrought upon us, along with their opposite, the incredible joy and elation that only a child can bring to your life, or the deep contentment after a hard day’s work and a delicious meal shared with your loved ones. Religion teaches us to accept our lack of control over the bad and appreciate the good when it comes.
-
-**This is a good start**, but it leaves much of the most important part of human experience up to chance: things happen, sure, but it is up to us to derive meaning from the chaos that makes up a human life. This is where Joe Maddon comes in.
-
-Maddon views life as a process - you can sort of visualize it as a complex Dr Seuss input-output machine[^1], where we control the inputs, some magic happens, and something comes out the other side. In Maddon’s case, the something is the result of a baseball game, and the inputs are the “controllables” - how you practice, how you manage adversity, team cohesion, etc. As a sports fanatic and lover of a good mental model, I’ve always been drawn to the idea that focusing on the inputs you can control, over time, tends to lead to a desirable output, regardless of domain or application.
-
-I question, however, whether Maddon's model is granular enough. After all, Maddon is talking about grown men who are among the very best in the world at what they do. Unless you believe that professional athleticism is entirely the result of genetic roulette (it’s not), you’d expect professional athletes to be exceptionally good at controlling the controllables already. What about all of the people who failed to reach the professional level? What happened?
-
-Like any model, what I am about to suggest is rife with faults and incomplete in explanatory power, but consider the following: **The most important “controllable” is not actually an input to Maddon’s machine, it is what we come to believe about the inputs when we see what comes out.**[^2]
-
-Using such general language is confusing so let’s consider an example that is less black-and-white than the result of a baseball game.
-
-Take the common example of a child who comes to believe they are bad at math. From the child’s perspective, they are controlling the controllables: they go to school, listen to the teacher as best they can, attempt their homework, ask for help, etc. And yet, when the machine produces a bad result - struggle or failure - there is no other explanation available to the child than that they are “bad at math” or, worse, stupid. And so they come to believe that they are bad at math or, worse, stupid, and often this belief is reinforced by parents and peers and thus a child who in all likelihood is totally fine at math and just had a small gap in their understanding grows into an adult who avoids math and all things math-related at all costs, even leaving simple tasks like basic household accounting up to her domestic partner who pockets a few dollars a week for himself and never commits to a long-term relationship because he sees her as beyond-repair stupid for not realizing he is stealing from her and she falls into an emotional chasm believing she is unworthy of love for some reason that isn’t totally clear yet is indelibly obvious to her subconscious, and the wheel turns.[^3]
-
-Now, given such an example, which unfortunately I am sure many many many women actually have at least some lived experience of, it should be incredibly obvious that the problem here is not the child, but the idea that they come to believe that the explanation for their struggle or failure is an inherent “badness” at math or, worse, stupidity. **The lesson here being that the most important controllable is not obvious: that more important than any input into the machine is the idea that short-term results themselves do not reflect any particular strength or weakness of character upon the one trying to influence the result.**
-
-Of course, this is not something we are taught as children and, often, even adults struggle mightily to accept this universal truth, much as they struggle to accept their lack control over the events that help shape their lives. And yet the two are inseparable.
-
-**It was economist Daniel Kahneman** who spent decades studying human decision making, eventually publishing a survey of his life’s work in *Thinking Fast And Slow.*[^4] The premise of the book is that humans possess two decision-making systems, one fast and the other slow. He calls them System A and System B or something similar. For simpicity’s sake, System A is the human inclination to react to new information and System B is the inclination to respond. On the surface, reaction and response seem almost synonymous but the difference is in the speed with which one forms a belief based on new information. In our example, reaction is taking the result of Maddon’s input-output machine and moving forward without interrogating the results. Response spends a moment to consider the extent to which the results represent the inputs, or whether something else might be going on inside the machine, before moving forward.
-
-Which brings us back to Joe Maddon's Chicago Cubs, or the primary differentiator between professional athletes and other elite athletes who don't quite make it. My best guess is that the biggest difference between a truly elite athlete and a just-sub-elite athlete is not in their genetics, diet, or even physical training, but rather in their mental-emotional training, in whether they believe that because they struck out once or even 10 times in a row they are a bad hitter, or whether they view each at bat as an opportunity to learn and adjust their approach to hitting such that the next at bat will be the start of their next hitting streak. The former worldview is reactive to new information (the output/result of an at bat), the latter is responsive.
-
-**Now, zoom out a bit** and think about how our updated model of Joe Maddon’s input-output Dr Seuss machine might fit into a coherent worldview. Like religion teaches us, we can accept that we have very little control over the events that make up our lives (e.g. most kids can’t pick their math teachers) but we do not need to accept that those events and any resulting effects reflect anything - good or bad - about us. We are incapable of escaping the wheel, but we are no longer under its tyranny: we are able to choose the meaning we make from the events that make up our lives.
-
-Next, zoom in a whole lot and think about what determines a life event. Maybe you get married, you get a new job, a parent dies, the wheel turns. I’d like to suggest that these are *major* life events, and that the events that truly make up and sum to determine your life and its quality are far more numerable: you hold the door for a stranger, you smile at someone on the subway, you say thank you; and vice versa, someone smiles at you, someone cuts you off in traffic, someone fails to pick up their dog’s shit and you step in it, etc. I’d like to suggest that it is in how you respond to *these* events - the mundane daily micro-events of your life - that will make up the quality of your lived experience as a human being: someone cuts you off in traffic, do you react or take a split second to consciously respond? Your boss is a huge fucking asshole, do you react or respond? Your spouse cheats on you. Reaction or response?
-
-As you can see, there are endless, literally-momentary opportunities to choose your response to this human existence. The great lie, the one that is and has been propagated since the dawn of humanity, is that you are subjugate to the tyranny of a God you don’t know much less understand. The reality is that you are not a subject at all, but rather the co-creator of your life's meaning. All you need to do is take a moment and choose your responses within the chaotic, inevitable stream of events that helps shape your unique, entirely-your-own human experience.
-
-**Choose wisely**.
-
----
-**Further Reading**
-[^0]: Wessler, Kirk. “Wessler: Maddon, Cubs embrace process of achieving success.” Peoria Journsal Star. October 10, 2015. https://www.pjstar.com/story/sports/mlb/2015/10/10/wessler-maddon-cubs-embrace-process/33285094007/.
-[^1]: Seuss. *The Sneetches: And Other Stories*. New York: Random House, 1989.
-[^2]: Ruiz, Don Miguel. *The Four Agreements*. San Rafael: Amber-Allen Publishing, 2001.
-[^3]: Wallace, David Foster. "This Is Water." Speech, Kenyon College, Gambier, Ohio, May 21, 2005.
-[^4]: Kahneman, Daniel. *Thinking, Fast and Slow*. New York: Farrar, Straus and Giroux, 2011.
-
-
+export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />

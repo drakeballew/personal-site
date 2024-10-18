@@ -1,5 +1,19 @@
 import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
-import designSystem from './photo.jpg'
+import image1 from './image-1.jpg'
+import image2 from './image-2.jpg'
+import image3 from './image-3.jpg'
+import image4 from './image-4.jpg'
+import image5 from './image-5.jpg'
+import image6 from './image-6.jpg'
+import image7 from './image-7.jpg'
+import image8 from './image-8.jpg'
+import image9 from './image-9.jpg'
+import image10 from './image-10.jpg'
+import image11 from './image-11.jpg'
+import image12 from './image-12.jpg'
+import image13 from './image-13.jpg'
+import image14 from './image-14.jpg'
+import image15 from './image-15.jpg'
 
 export const article = {
   author: 'Drake Ballew',
@@ -17,9 +31,21 @@ export const article = {
 
 export const gallery = {
   images: [
-    { src: designSystem.src, alt: 'Great Wall of China' },
-    { src: designSystem.src, alt: 'Forbidden City' },
-    { src: designSystem.src, alt: 'Shanghai Skyline' },
+    { src: image1.src, alt: 'On the shore of Qinghai Lake' },
+    { src: image2.src, alt: 'Covered up from the Tibetan Plateau sun' },
+    { src: image3.src, alt: 'Flying a kite on the Nanjing city walls' },
+    { src: image4.src, alt: 'Hiking a dilapidated section of The Great Wall' },
+    { src: image5.src, alt: 'Sun Yat Sen\'s Mausoleum on a rainy day' },
+    { src: image6.src, alt: 'A small hillside temple in Sichuan' },
+    { src: image7.src, alt: 'Young monks outside Labrang Monastery' },
+    { src: image8.src, alt: 'Horses taking a break in the fields of Gansu Province' },
+    { src: image9.src, alt: 'All smiles in Urumqi' },
+    { src: image10.src, alt: 'A Beijing temple\'s protector' },
+    { src: image11.src, alt: 'Beijing Hutong living' },
+    { src: image12.src, alt: 'A Sichuanese candy bird' },
+    { src: image13.src, alt: 'A bustling market in Xi\'an' },
+    { src: image14.src, alt: 'The serene West Lake in Hangzhou' },
+    { src: image15.src, alt: 'The vibrant skyline of Shanghai' },
   ],
 }
 
@@ -29,5 +55,3 @@ export const metadata = {
 }
 
 export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
-
-Photos of China
