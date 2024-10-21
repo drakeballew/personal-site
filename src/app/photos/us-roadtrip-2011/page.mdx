@@ -1,11 +1,93 @@
-import { ArticleLayout } from '@/components/ArticleLayout'
+import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
+
+import image1 from './image-1.JPG'
+import image2 from './image-2.JPG'
+import image3 from './image-3.JPG'
+import image4 from './image-4.JPG'
+import image5 from './image-5.JPG'
+import image6 from './image-6.JPG'
+import image7 from './image-7.JPG'
+import image8 from './image-8.JPG'
+import image9 from './image-9.JPG'
+import image10 from './image-10.JPG'
+import image11 from './image-11.JPG'
+import image12 from './image-12.JPG'
+import image14 from './image-14.JPG'
+import image15 from './image-15.JPG'
+import image16 from './image-16.JPG'
+import image17 from './image-17.JPG'
+import image18 from './image-18.JPG'
+import image19 from './image-19.JPG'
+import image20 from './image-20.JPG'
+import image21 from './image-21.JPG'
+import image22 from './image-22.JPG'
+import image23 from './image-23.JPG'
+import image24 from './image-24.JPG'
+import image25 from './image-25.JPG'
+import image26 from './image-26.JPG'
+import image28 from './image-28.JPG'
+import image29 from './image-29.JPG'
+import image30 from './image-30.JPG'
+import image31 from './image-31.JPG'
+import image32 from './image-32.JPG'
+import image33 from './image-33.JPG'
+import image34 from './image-34.JPG'
+import image35 from './image-35.JPG'
+import image36 from './image-36.JPG'
+import image37 from './image-37.JPG'
 
 export const article = {
-  author: 'Adam Wathan',
-  date: '2022-09-02',
-  title: 'Introducing Animaginary: High performance web animations',
-  description:
-    'When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+  author: 'Drake Ballew',
+  date: '2011-06-15',
+  title: 'The Great American Roadtrip',
+  description: 'Description text',
+  content: (
+    <div>
+      <p>
+        Little description
+      </p>
+    </div>
+  ),
+}
+
+export const gallery = {
+  images: [
+    { src: image1.src, alt: 'Description for image 1' },
+    { src: image2.src, alt: 'Description for image 2' },
+    { src: image3.src, alt: 'Description for image 3' },
+    { src: image4.src, alt: 'Description for image 4' },
+    { src: image5.src, alt: 'Description for image 5' },
+    { src: image6.src, alt: 'Description for image 6' },
+    { src: image7.src, alt: 'Description for image 7' },
+    { src: image8.src, alt: 'Description for image 8' },
+    { src: image9.src, alt: 'Description for image 9' },
+    { src: image10.src, alt: 'Description for image 10' },
+    { src: image11.src, alt: 'Description for image 11' },
+    { src: image12.src, alt: 'Description for image 12' },
+    { src: image14.src, alt: 'Description for image 14' },
+    { src: image15.src, alt: 'Description for image 15' },
+    { src: image16.src, alt: 'Description for image 16' },
+    { src: image17.src, alt: 'Description for image 17' },
+    { src: image18.src, alt: 'Description for image 18' },
+    { src: image19.src, alt: 'Description for image 19' },
+    { src: image20.src, alt: 'Description for image 20' },
+    { src: image21.src, alt: 'Description for image 21' },
+    { src: image22.src, alt: 'Description for image 22' },
+    { src: image23.src, alt: 'Description for image 23' },
+    { src: image24.src, alt: 'Description for image 24' },
+    { src: image25.src, alt: 'Description for image 25' },
+    { src: image26.src, alt: 'Description for image 26' },
+    { src: image28.src, alt: 'Description for image 28' },
+    { src: image29.src, alt: 'Description for image 29' },
+    { src: image30.src, alt: 'Description for image 30' },
+    { src: image31.src, alt: 'Description for image 31' },
+    { src: image32.src, alt: 'Description for image 32' },
+    { src: image33.src, alt: 'Description for image 33' },
+    { src: image34.src, alt: 'Description for image 34' },
+    { src: image35.src, alt: 'Description for image 35' },
+    { src: image36.src, alt: 'Description for image 36' },
+    { src: image37.src, alt: 'Description for image 37' },
+  ],
 }
 
 export const metadata = {
@@ -13,94 +95,4 @@ export const metadata = {
   description: article.description,
 }
 
-export default (props) => <ArticleLayout article={article} {...props} />
-
-When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
-
-To make this possible, we needed to squeeze every drop of performance out of the browser possible. And so Animaginary was born.
-
-```js
-import { animate } from '@planetaria/animaginary'
-
-export function MyComponent({ open, children }) {
-  return (
-    <animate.div
-      in={open}
-      animateFrom="opacity-0 scale-95"
-      animateTo="opacity-100 scale-100"
-      duration={350}
-    >
-      {children}
-    </animate.div>
-  )
-}
-```
-
-Animaginary is our new web animation library that redefines what you thought was possible on the web. Hand-written in optimized WASM, Animaginary can even animate the `height` property of an element at 60fps.
-
-## Sermone fata
-
-Lorem markdownum, bracchia in redibam! Terque unda puppi nec, linguae posterior
-in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite
-variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda
-torquere temptata, erit maneat et ramos, [iam](#) ait dominari
-potitus! Tibi litora matremque fumantia condi radicibus opusque.
-
-Deus feram verumque, fecit, ira tamen, terras per alienae victum. Mutantur
-levitate quas ubi arcum ripas oculos abest. Adest [commissaque
-victae](#) in gemitus nectareis ire diva
-dotibus ora, et findi huic invenit; fatis? Fractaque dare superinposita
-nimiumque simulatoremque sanguine, at voce aestibus diu! Quid veterum hausit tu
-nil utinam paternos ima, commentaque.
-
-```c
-exbibyte_wins = gigahertz(3);
-grayscaleUtilityClient = control_uat;
-pcmciaHibernate = oop_virus_console(text_mountain);
-if (stateWaisFirewire >= -2) {
-    jfs = 647065 / ldapVrml(tutorialRestore, 85);
-    metal_runtime_parse = roomComputingResolution - toolbarUpload +
-            ipx_nvram_open;
-} else {
-    maximizeSidebar *= suffix_url(flatbed + 2, requirements_encoding_node +
-            only_qbe_media, minicomputer);
-}
-```
-
-Aere repetiti cognataque natus. Habebat vela solutis saepe munus nondum adhuc
-oscula nomina pignora corpus deserat.
-
-## Lethaei Pindumve me quae dinumerat Pavor
-
-Idem se saxa fata pollentibus geminos; quos pedibus. Est urnis Herses omnes nec
-divite: et ille illa furit sim verbis Cyllenius.
-
-1. Captus inpleverunt collo
-2. Nec nam placebant
-3. Siquos vulgus
-4. Dictis carissime fugae
-5. A tacitos nulla viginti
-
-Ungues fistula annoso, ille addit linoque motatque uberior verso
-[rubuerunt](#) confine desuetaque. _Sanguine_ anteit
-emerguntque expugnacior est pennas iniqui ecce **haeret** genus: peiora imagine
-fossas Cephisos formosa! Refugitque amata [refelli](#)
-supplex. Summa brevis vetuere tenebas, hostes vetantis, suppressit, arreptum
-regna. Postquam conpescit iuvenis habet corpus, et erratica, perdere, tot mota
-ars talis.
-
-```c
-digital.webcam_dual_frequency = webmasterMms;
-if (5 + language_standalone_google) {
-    cc_inbox_layout *= file_character;
-    task += p;
-    lockUnicode += enterprise_monochrome(tokenFunctionPersonal, keyVirtual,
-            adf);
-}
-windows_binary_esports(87734, array(restoreRomTopology, adRaw(407314),
-        dongleBashThumbnail), interpreter);
-```
-
-Sit volat naturam; motu Cancri. Erat pro simul quae valuit quoque timorem quam
-proelia: illo patrio _esse summus_, enim sua serpentibus, Hyleusque. Est coniuge
-recuso; refert Coroniden ignotos manat, adfectu.
+export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />

@@ -50,7 +50,7 @@ export default function Photos() {
   return (
     <SimpleLayout
       title="I’ve taken photos all over the world. Here are some of my favorites and the stories behind them."
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      intro="Photography: instances of light shined onto objects, reflected through a lens, and frozen in time forever. I've always found it hard to take a bad photograph when the subject is good enough, so any credit for a photograph you may like should go to the subject, not the photographer."
     >
       <div className="space-y-20">
         <PhotosSection title="Asia">
@@ -150,6 +150,13 @@ export default function Photos() {
             cta="View photos"
           />
           <Appearance
+            href="/photos/oahu-hawaii"
+            title="Oahu, Hawaii"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Nov 2015"
+            cta="View photos"
+          />
+          <Appearance
             href="/photos/central-america"
             title="Backpacking Central America"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
@@ -168,6 +175,20 @@ export default function Photos() {
             title="Mexico City"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
             tripDate="Oct 2019"
+            cta="View photos"
+          />
+          <Appearance
+            href="/photos/kauai-hawaii"
+            title="Kauai, Hawaii"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Nov 2020"
+            cta="View photos"
+          />
+          <Appearance
+            href="/photos/portland"
+            title="Portland, Oregon"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Sep 2021"
             cta="View photos"
           />
         </PhotosSection>
