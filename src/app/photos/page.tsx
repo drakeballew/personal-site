@@ -129,6 +129,13 @@ export default function Photos() {
         </PhotosSection>
         <PhotosSection title="North America">
         <Appearance
+            href="/photos/panama-city-san-blas"
+            title="Panama City & San Blas"
+            description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
+            tripDate="Jan 2009"
+            cta="View photos"
+          />
+        <Appearance
             href="/photos/us-roadtrip-2009"
             title="Western States Roadtrip"
             description="They say that if you’re not embarassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated."
