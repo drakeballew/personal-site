@@ -65,10 +65,11 @@ export function PhotoJournalLayout({ article, gallery }: PhotoJournalLayoutProps
                 <span className="ml-3">{formatDate(article.date)}</span>
               </time>
             </header>
+            <ImageGallery images={gallery.images} />
             <Prose className="mt-8" data-mdx-content>
               {article.content}
             </Prose>
-            <ImageGallery images={gallery.images} />
+            
           </article>
         </div>
       </div>
