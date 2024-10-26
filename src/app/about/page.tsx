@@ -69,7 +69,7 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Drake. I'm based on the West Coast, and I love learning.
+            I&apos;m Drake. I&apos;m based on the West Coast, and I love learning.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -95,22 +95,21 @@ export default function About() {
             </p>
             <p>
               Like I said, I <b>love</b> learning. I really think it may be the one non-living thing that gives
-              the most meaning to my life. And again, looking back, it's easy to wonder why I kept at it - 
-              why I kept pushing myself to compete both externally and internally to improve as a soccer player -
+              the most meaning to my life. And again, looking back, it&apos;s easy to wonder why I kept at it, pushing myself to compete both externally and internally to improve as a soccer player,
               and the answer is a love of learning and a love of seeing the progression in myself as I learn.
-              It's deeply, deeply engrained into my identity.
+              It&apos;s deeply, deeply engrained into my identity.
             </p>
             <p>
-              Eventually, I moved on from soccer and did other things. Today, I'm a self-taught small business owner
-              of a boutique technology consulting agency. I'm a hobbyist developer, chef, and gardener, and a full-time
-              parent to two furbabies. And those hours spent practicing alone as a kid, and what I learned about myself
-              as those hours passed year after year, have informed every part of my life as an adult and continue to 
+              Eventually, I moved on from soccer and did other things. Today, I&apos;m a self-taught small business owner
+              of a boutique technology consulting agency and a hobbyist developer, chef, gardener, and full-time
+              parent to two furbabies. Those hours spent practicing alone as a kid and what I learned about myself
+              as those hours passed year after year have informed every part of my life as an adult and continue to 
               help me to find meaning in even the most difficult circumstances.
             </p>
             <p>
-              The best part of being a passionate, life-long learner is that the journey never ends. I'm approaching 40.
-              With a bit of luck, I've got at least twice as many trips around the sun in front of me as I do behind,
-              and I can't wait to grapple with and struggle with so many future things I don't know or maybe struggle to understand,
+              The best part of being a passionate, life-long learner is that the journey never ends. I&apos;m approaching 40.
+              With a bit of luck, I&apos;ve got at least twice as many solar cycles in front of me as I do behind,
+              and I can&apos;t wait to grapple with and struggle with so many future things I don&apos;t know or maybe struggle to understand,
               because for me, that's the entire point.
             </p>
           </div>
