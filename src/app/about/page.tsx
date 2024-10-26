@@ -69,35 +69,49 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I’m Drake. I'm based on the West Coast, and I love learning.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Learning has always been my passion, and looking back on my life,
+              everything I have ever enjoyed doing has had some element of learning
+              and development or progress to it. Take soccer for example.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              I started playing soccer when I was 5 years old. As a kid, I had three siblings 
+              and was largely raised by a single mom. I loved soccer, but my siblings were either
+               too young or not as interested so I had to find people to play with or, more often, play by myself.
+              Today, I see those countless hours of solitary dribbling, 
+              passing against the side of the garage, and doing toe-tap exercises
+              as evidence of an innate drive for improvement, the basis of which
+              lied on the ability to learn how to translate my mind's intent
+              to my feet's effect on the ball.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              In all honesty, until my last two years playing competitive soccer when I was 13 or 14 years old,
+              I was pretty mediocre - good enough to make the best local travel squad,
+              but not good enough to start and often insecure when I was on the field. And that brings up
+              the other part of the equation: passion.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Like I said, I <b>love</b> learning. I really think it may be the one non-living thing that gives
+              the most meaning to my life. And again, looking back, it's easy to wonder why I kept at it - 
+              why I kept pushing myself to compete both externally and internally to improve as a soccer player -
+              and the answer is a love of learning and a love of seeing the progression in myself as I learn.
+              It's deeply, deeply engrained into my identity.
+            </p>
+            <p>
+              Eventually, I moved on from soccer and did other things. Today, I'm a self-taught small business owner
+              of a boutique technology consulting agency. I'm a hobbyist developer, chef, and gardener, and a full-time
+              parent to two furbabies. And those hours spent practicing alone as a kid, and what I learned about myself
+              as those hours passed year after year, have informed every part of my life as an adult and continue to 
+              help me to find meaning in even the most difficult circumstances.
+            </p>
+            <p>
+              The best part of being a passionate, life-long learner is that the journey never ends. I'm approaching 40.
+              With a bit of luck, I've got at least twice as many trips around the sun in front of me as I do behind,
+              and I can't wait to grapple with and struggle with so many future things I don't know or maybe struggle to understand,
+              because for me, that's the entire point.
             </p>
           </div>
         </div>
