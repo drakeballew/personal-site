@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    "I'm Drake. I live on the West Coast, and I love learning.",
 }
 
 export default function About() {
@@ -61,7 +61,7 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
-              alt=""
+              alt="Drake Ballew near the Golden Gate Bridge"
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
@@ -84,8 +84,8 @@ export default function About() {
               Today, I see those countless hours of solitary dribbling, 
               passing against the side of the garage, and doing toe-tap exercises
               as evidence of an innate drive for improvement, the basis of which
-              lied on the ability to learn how to translate my mind's intent
-              to my feet's effect on the ball.
+              lied on the ability to learn how to translate my mind&apos;s intent
+              to my feet&apos;s effect on the ball.
             </p>
             <p>
               In all honesty, until my last two years playing competitive soccer when I was 13 or 14 years old,
@@ -110,7 +110,7 @@ export default function About() {
               The best part of being a passionate, life-long learner is that the journey never ends. I&apos;m approaching 40.
               With a bit of luck, I&apos;ve got at least twice as many solar cycles in front of me as I do behind,
               and I can&apos;t wait to grapple with and struggle with so many future things I don&apos;t know or maybe struggle to understand,
-              because for me, that's the entire point.
+              because for me, that&apos;s the entire point.
             </p>
           </div>
         </div>
