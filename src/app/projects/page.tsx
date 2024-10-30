@@ -3,26 +3,33 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
+import logoOpenRecipe from '@/images/logos/openrecipe-logo.svg'
+import logoPacaya from '@/images/logos/pacaya-logo.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoPracticeHealth from '@/images/logos/practice-health-logo.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'OpenRecipe.ai',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Machine learning to help you cook better.',
+    link: { href: 'https://www.openrecipe.ai', label: 'openrecipe.ai' },
+    logo: logoOpenRecipe,
   },
   {
-    name: 'Animaginary',
+    name: 'Practice Health',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Mental healthcare for beginners.',
+    link: { href: 'https://www.practice.health/', label: 'practice.health' },
+    logo: logoPracticeHealth,
+  },
+  {
+    name: 'Pacaya Digital',
+    description:
+      'Solopreneur Growth consultancy.',
+    link: { href: 'https://www.pacaya.io', label: 'pacaya.io' },
+    logo: logoPacaya,
   },
   {
     name: 'HelioStream',
@@ -36,7 +43,7 @@ const projects = [
     description:
       'The operating system that powers our Planetaria space shuttles.',
     link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    logo: logoPacaya,
   },
   {
     name: 'OpenShuttle',
@@ -60,14 +67,14 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Things I’ve tinkered with for work and pleasure.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Things I’ve tinkered with for work and pleasure"
+      intro="I'm relatively new to building things, but here are some projects and businesses I've worked on that I'm proud of."
     >
       <ul
         role="list"
