@@ -1,9 +1,12 @@
-import { type Metadata } from 'next'
-
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+
+async function fetchArticles() {
+  const articles = await getAllArticles()
+  return articles
+}
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -34,18 +37,12 @@ function Article({ article }: { article: ArticleWithSlug }) {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'Articles',
-  description:
-    'Long-form writing that often intersects the liberal arts with current events and technology, collected in chronological order.',
-}
-
 export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+  const articles = await fetchArticles()
 
   return (
     <SimpleLayout
-      title="A wanderer's ramblings"
+      title="Wandering ramblings"
       intro="Long-form writing that often intersects the liberal arts with current events and technology, collected in chronological order."
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

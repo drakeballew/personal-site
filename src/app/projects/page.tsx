@@ -21,7 +21,7 @@ const projects = [
     name: 'Practice Health',
     description:
       'Mental healthcare for beginners.',
-    link: { href: 'https://www.practice.health/', label: 'practice.health' },
+    link: { href: 'https://practicehealth.webflow.io/', label: 'practicehealth.webflow.io' },
     logo: logoPracticeHealth,
   },
   {
@@ -30,27 +30,6 @@ const projects = [
       'Solopreneur Growth consultancy.',
     link: { href: 'https://www.pacaya.io', label: 'pacaya.io' },
     logo: logoPacaya,
-  },
-  {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPacaya,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
   },
 ]
 

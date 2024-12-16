@@ -50,7 +50,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    "I'm Drake. I live on the West Coast, and I love learning.",
+    "Hi! I'm Drake, and I'm addicted to learning.",
 }
 
 export default function About() {
@@ -69,48 +69,32 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&apos;m Drake. I&apos;m based on the West Coast, and I love learning.
+            Hi! I&apos;m Drake.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Learning has always been my passion, and looking back on my life,
-              everything I have ever enjoyed doing has had some element of learning
-              and development or progress to it. Take soccer for example.
+              As a kid, I loved playing soccer. I spent countless hours alone: dribbling, 
+              passing against the side of the garage, doing toe-taps and other exercises.
             </p>
             <p>
-              I started playing soccer when I was 5 years old. As a kid, I had three siblings 
-              and was largely raised by a single mom. I loved soccer, but my siblings were either
-               too young or not as interested so I had to find people to play with or, more often, play by myself.
-              Today, I see those countless hours of solitary dribbling, 
-              passing against the side of the garage, and doing toe-tap exercises
-              as evidence of an innate drive for improvement, the basis of which
-              lied on the ability to learn how to translate my mind&apos;s intent
-              to my feet&apos;s effect on the ball.
+              In spite of my effort, I remained just mediocre - good enough to make the best local travel squad, but not good enough to start and often insecure when I was on the field. Still, I kept at it until high school, when I had to choose a sport. I chose running.
             </p>
             <p>
-              In all honesty, until my last two years playing competitive soccer when I was 13 or 14 years old,
-              I was pretty mediocre - good enough to make the best local travel squad,
-              but not good enough to start and often insecure when I was on the field. And that brings up
-              the other part of the equation: passion.
+              But my last season, after nearly 10 years dedicated to soccer and very little to show for my effort,
+              I broke through. I played so well that my teammates urged the coaches to add me to the starting lineup, where I played "Stopper," shutting down the other team&apos;s 
+              attack and starting our own from the defensive end.
             </p>
             <p>
-              Like I said, I <b>love</b> learning. I really think it may be the one non-living thing that gives
-              the most meaning to my life. And again, looking back, it&apos;s easy to wonder why I kept at it, pushing myself to compete both externally and internally to improve as a soccer player,
-              and the answer is a love of learning and a love of seeing the progression in myself as I learn.
-              It&apos;s deeply, deeply engrained into my identity.
+              In my final competitive game, I scored a perfect volley off a corner kick - upper right 90, no chance for the keeper. I didn't know then that a quarter century later, I would remember that moment as clearly as a cloudless blue sky: the catharsis of a decade spent toiling.
             </p>
             <p>
-              Eventually, I moved on from soccer and did other things. Today, I&apos;m a self-taught small business owner
-              of a boutique technology consulting agency and a hobbyist developer, chef, gardener, and full-time
-              parent to two furbabies. Those hours spent practicing alone as a kid and what I learned about myself
-              as those hours passed year after year have informed every part of my life as an adult and continue to 
-              help me to find meaning in even the most difficult circumstances.
+              Eventually, I moved on from soccer and did other things. Today, I&apos;m the self-taught owner
+              of a boutique technology consulting agency and hobbyist developer, chef, gardener, and poet among other things. Not to mention full-time
+              parent to two furbabies. 
             </p>
             <p>
-              The best part of being a passionate, life-long learner is that the journey never ends. I&apos;m approaching 40.
-              With a bit of luck, I&apos;ve got at least twice as many solar cycles in front of me as I do behind,
-              and I can&apos;t wait to grapple with and struggle with so many future things I don&apos;t know or maybe struggle to understand,
-              because for me, that&apos;s the entire point.
+              I&apos;m approaching 40 and with a bit of luck, I&apos;ve got more solar cycles in front of me than I do behind. What I learned as a kid, alone kicking a ball against
+              the garage well past sunset each night, is that struggle - not just to achieve, but to understand, to do the right thing - is the entire point. But only if you're learning from the experience.
             </p>
           </div>
         </div>

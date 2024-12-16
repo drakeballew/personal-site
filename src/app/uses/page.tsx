@@ -43,7 +43,7 @@ export default function Uses() {
   return (
     <SimpleLayout
       title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      intro="Here’s a big list of stuff I use, sorted by category. Heads up that a lot of these have affiliate links, but that's not why they're here."
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
