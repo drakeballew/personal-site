@@ -81,11 +81,11 @@ export default function About() {
             </p>
             <p>
               But my last season, after nearly 10 years dedicated to soccer and very little to show for my effort,
-              I broke through. I played so well that my teammates urged the coaches to add me to the starting lineup, where I played "Stopper," shutting down the other team&apos;s 
+              I broke through. I played so well that my teammates urged the coaches to add me to the starting lineup, where I played &quot;Stopper,&quot; shutting down the other team&apos;s 
               attack and starting our own from the defensive end.
             </p>
             <p>
-              In my final competitive game, I scored a perfect volley off a corner kick - upper right 90, no chance for the keeper. I didn't know then that a quarter century later, I would remember that moment as clearly as a cloudless blue sky: the catharsis of a decade spent toiling.
+              In my final competitive game, I scored a perfect volley off a corner kick - upper right 90, no chance for the keeper. I didn&apos;t know then that a quarter century later, I would remember that moment as clearly as a cloudless blue sky: the catharsis of a decade spent toiling.
             </p>
             <p>
               Eventually, I moved on from soccer and did other things. Today, I&apos;m the self-taught owner
@@ -94,7 +94,7 @@ export default function About() {
             </p>
             <p>
               I&apos;m approaching 40 and with a bit of luck, I&apos;ve got more solar cycles in front of me than I do behind. What I learned as a kid, alone kicking a ball against
-              the garage well past sunset each night, is that struggle - not just to achieve, but to understand, to do the right thing - is the entire point. But only if you're learning from the experience.
+              the garage well past sunset each night, is that struggle - not just to achieve, but to understand, to do the right thing - is the entire point. But only if you&apos;re learning from the experience.
             </p>
           </div>
         </div>
