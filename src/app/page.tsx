@@ -191,7 +191,7 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#https://www.linkedin.com/in/drakeballew/" variant="secondary" className="group mt-6 w-full">
+      <Button href="https://www.linkedin.com/in/drakeballew/" variant="secondary" className="group mt-6 w-full">
         View Profile  
         {/* <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" /> */}
       </Button>
@@ -241,19 +241,19 @@ export default async function Home() {
             currently exploring my interests in food, nutrition, and technology with <a href="https://www.openrecipe.ai" target="_blank">OpenRecipe</a>.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
+            <SocialLink href="https://bsky.app/" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
+              href="https://www.instagram.com/petedavidson.93"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="#"
+              href="https://github.com/drakeballew"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/drakeballew/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
