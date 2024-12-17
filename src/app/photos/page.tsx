@@ -50,7 +50,7 @@ export default function Photos() {
   return (
     <SimpleLayout
       title="I’ve taken photos all over the world. Here are some of my favorites and the stories behind them."
-      intro="Photography: instances of light shined onto objects, reflected through a lens, and frozen in time forever. It's hard to take a bad photograph when the subject is good enough. Hopefully you like some of these."
+      intro="It's hard to take a bad photograph when the subject is good enough. Hopefully you like some of these."
     >
       <div className="space-y-20">
         <PhotosSection title="Asia">
