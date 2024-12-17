@@ -48,7 +48,7 @@ export default function Uses() {
       <div className="space-y-20">
         <ToolsSection title="Software">
           <Tool title="Github Copilot + VS Code" href="https://github.com/features/copilot">
-            Not perfect, but makes debugging code easier. I'm not sure I am at the level where I can use it to write code from scratch, but very helpful tool worth checking out.
+            Not perfect, but makes debugging code easier. I&apos;m not sure I am at the level where I can use it to write code from scratch, but very helpful tool worth checking out.
           </Tool>
           <Tool title="ChatGPT" href="https://openai.com/">
             Super helpful for debugging code and getting quick overviews of other topics. I like to use it as a sort of Wikipedia Lite.
@@ -57,7 +57,7 @@ export default function Uses() {
             A more code-friendly Zapier alternative. I use it for most of my automation flows.
           </Tool>
           <Tool title="Airtable" href="https://airtable.com/invite/r/vllZZPBS">
-            Similar to Google Sheets but has better file management, which comes in handy when you're working with a lot of images and other media.
+            Similar to Google Sheets but has better file management, which comes in handy when you&apos;re working with a lot of images and other media.
           </Tool>
           <Tool title="Webflow" href="https://www.webflow.com">
             A powerful and relatively easy to use website builder. I recommend it for most of my clients.
@@ -138,35 +138,35 @@ export default function Uses() {
             The most important tool in your kitchen. Get a good one and take care of it. I use this one.
           </Tool>
           <Tool title="Naniwa Grit #800 Sharpening Stone" href="https://amzn.to/3BCcsSp">
-              The stand isn't important (you can use a wet towel), but be sure to go #800 grit as a beginner - good for sharpening, less so for honing.
+              The stand isn&apos;t important (you can use a wet towel), but be sure to go #800 grit as a beginner - good for sharpening, less so for honing.
             </Tool>
             <Tool title="Naniwa Whetsone" href="https://amzn.to/49M15Ei">
-              Use this to flatten your sharpening stone's surface after each use.
+              Use this to flatten your sharpening stone&apos;s surface after each use.
             </Tool>
             <Tool title="Cutting board" href="https://amzn.to/3PlQI0B">
-            Go big and bamboo here, you'll be surprised how much space you need.
+            Go big and bamboo here, you&apos;ll be surprised how much space you need.
           </Tool>
           <Tool title="Hexclad 12-Inch Fry Pan" href="https://amzn.to/4iExRv0">
-            The price of this pan has gone way up since I bought mine. I use it almost every day and its non-stick claim is no joke, but maybe do your research and see if there's a better option.
+            The price of this pan has gone way up since I bought mine. I use it almost every day and its non-stick claim is no joke, but maybe do your research and see if there&apos;s a better option.
           </Tool>
           
           <Tool title="Tramontina Gourmet 8-Piece Cookware Set" href="https://www.wayfair.com/kitchen-tabletop/pdp/tramontina-tri-ply-clad-gourmet-8-pc-cookware-set-ta1099.html">
-            You need a good set of pots - I don't really use the pans. I don't think brand is super important, but here's what I use. Affordable and high quality.
+            You need a good set of pots - I don&apos;t really use the pans. I don&apos;t think brand is super important, but here&apos;s what I use. Affordable and high quality.
           </Tool>
           <Tool title="Lodge Cast Iron Skillet" href="https://amzn.to/3VG6SFq">
-            You'll need the higher sides of a 12" skillet for a lot of recipes.
+            You&apos;ll need the higher sides of a 12&quot; skillet for a lot of recipes.
           </Tool>
           <Tool title="Lodge Dutch Oven" href="https://amzn.to/4gALolk">
-            Great for soups, stews, braising, and even baking bread. Don't overspend.
+            Great for soups, stews, braising, and even baking bread. Don&apos;t overspend.
           </Tool>
           <Tool title="Stainless Steel Fish Spatula" href="https://amzn.to/3OYmBMv">
-            Flip yo' shit. Make sure to go metal here and avoid the microplastic burn off into your food.
+            Flip yo&apos; shit. Make sure to go metal here and avoid the microplastic burn off into your food.
           </Tool>
           <Tool title="Set of Silicone Spatulas" href="https://amzn.to/49GTwys">
             You will use these every day. So handy.
           </Tool>
           <Tool title="Cleanblend 64oz Countertop Blender" href="https://amzn.to/3BwYO34">
-            Better for liquids than a food processor. Smoothies, anything that needs to be aerated, etc. I've had this blender for 10+ years. Great warranty and customer service.
+            Better for liquids than a food processor. Smoothies, anything that needs to be aerated, etc. I&apos;ve had this blender for 10+ years. Great warranty and customer service.
           </Tool>
           <Tool title="Cuisinart 14-Cup Food Processor" href="https://amzn.to/4iyDt9Y">
             Better for solids than a blender. Hummus, anything requiring minced fresh vegetables, etc. I was initially doubtful but am now grateful I got a larger food processor.
@@ -185,7 +185,7 @@ export default function Uses() {
         </ToolsSection>
         <ToolsSection title="Furballs">
         <Tool title="How to Introduce A Remote Collar to Your Dog" href="https://www.youtube.com/watch?v=OTUgYi-Rq2M">
-          Tom Davis' YouTube videos are a goldmine of educational content for novice dog trainers. You need to watch this before you start using a remote collar with your pup.
+          Tom Davis&apos; YouTube videos are a goldmine of educational content for novice dog trainers. You need to watch this before you start using a remote collar with your pup.
           </Tool>
           <Tool title="E-Collar Technologies miniEducator" href="https://amzn.to/3BCGJk3">
             Incredible tool to help you train your dog.
