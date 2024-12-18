@@ -120,11 +120,11 @@ export default function Photos() {
     {
       href: "/photos/paris",
       title: "Paris",
-      description: "I didn't eat a single croissant. Guess I gotta go back?",
+      description: "Forgot to eat a croissant. Guess I gotta go back.",
       tripDate: "April 2023",
       cta: "View photos",
       section: "Europe",
-      published: false,
+      published: true,
     },
     {
       href: "/photos/spain-morocco",
@@ -184,16 +184,16 @@ export default function Photos() {
     {
       href: "/photos/oahu-hawaii",
       title: "Oahu, Hawaii",
-      description: "Quick trip to Waikiki. Not bad, but not even close to Hawaii's best.",
+      description: "Quick trip to Waikiki. Donuts, poke, sunburn.",
       tripDate: "Nov 2015",
       cta: "View photos",
       section: "North America",
-      published: false,
+      published: true,
     },
     {
       href: "/photos/central-america",
       title: "Backpacking Central America",
-      description: "'Quit your job, sell your stuff, and hit the road.' 3 months on the Gringo Trail, starting in Caye Caulker and ending in Panama City.",
+      description: '"Quit your job, sell your stuff, and hit the road." 3 months on the Gringo Trail, starting in Caye Caulker and ending in Panama City.',
       tripDate: "Mar 2017",
       cta: "View photos",
       section: "North America",
@@ -206,7 +206,7 @@ export default function Photos() {
       tripDate: "Jan 2018",
       cta: "View photos",
       section: "North America",
-      published: false,
+      published: true,
     },
     {
       href: "/photos/mexico-city",
@@ -215,15 +215,16 @@ export default function Photos() {
       tripDate: "Oct 2019",
       cta: "View photos",
       section: "North America",
-      published: false,
+      published: true,
     },
     {
       href: "/photos/kauai-hawaii",
-      title: "Kauai, Hawaii",
+      title: "COVID in Kauai",
       description: "Mid-COVID bachannalia at its best with my brother and his friends.",
       tripDate: "Nov 2020",
       cta: "View photos",
-      published: false,
+      section: "North America",
+      published: true,
     },
     {
       href: "/photos/portland",
@@ -234,13 +235,22 @@ export default function Photos() {
       section: "North America",
       published: false,
     },
+    {
+      href: "/photos/saladita",
+      title: "Playa Saladita, Mexico",
+      description: "Surfs up! Little waves, big 'staches.",
+      tripDate: "Dec 2022",
+      cta: "View photos",
+      section: "North America",
+      published: true,
+    },
   ];
 
 
   return (
     <SimpleLayout
       title="I’ve taken photos all over the world. Here are some of my favorites and the stories behind them."
-      intro="It's hard to take a bad photograph when the subject is good enough. Hopefully you like some of these."
+      intro="Common themes: spicy food, hot babes, near-death experiences in pretty places."
     >
       <div className="space-y-20">
       <PhotosSection title="Asia">
