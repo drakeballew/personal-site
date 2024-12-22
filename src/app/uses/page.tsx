@@ -90,7 +90,7 @@ export default function Uses() {
           <Tool title="Nabers Solo 401k" href="https://www.solo401k.com/?via=drake">
             One way to plan retirement as a solopreneur.
           </Tool>
-          <Tool title="Anytime Mailbox" href="https://www.anytimemailbox.com">
+          <Tool title="Anytime Mailbox" href="https://anytimemailbox.referralrock.com/l/1DRAKEBALLE91/ ">
             Virtual mailbox for business owners.
           </Tool>
           </ToolsSection>
@@ -123,13 +123,13 @@ export default function Uses() {
           <Tool title="Olympus OM-5 Micro Four Thirds System Camera" href="https://amzn.to/3Dl8Apu">
             Rather than buying a fancy AI-enabled webcam, I decided to invest in a good mirrorless camera that I could use outside, in the kitchen, etc. This is the one I chose.
           </Tool>
-          <Tool title="Olympus M.Zuiko Digital ED 14-42mm f/3.5-5.6 EZ Lens" href="https://www.creativelive.com/">
+          <Tool title="Olympus M.Zuiko Digital ED 14-42mm f/3.5-5.6 EZ Lens" href="https://amzn.to/3VSFunX">
             Great for portraits.
           </Tool>
           <Tool title="Olympus M.Zuiko Digital ED 14-150mm F4.0-5.6 II Lens" href="https://amzn.to/4ghSn2N">
             More flexible than the lens above and better for travel, outdoor shooting, etc. If you buy one, buy this one, but both are great.
           </Tool>
-          <Tool title="Manfrotto Chicago Camera Backpack" href="https://www.bhphotovideo.com/c/product/1536627-REG/manfrotto_mb_ch_bp_50_chicago_backpack_50_medium.html">
+          <Tool title="Manfrotto Chicago Camera Backpack" href="https://amzn.to/3VNFgyo">
             High quality and great for travel. Tons of well-thought-out compartments.
           </Tool>
           </ToolsSection>
