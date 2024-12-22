@@ -30,7 +30,7 @@ interface PhotoJournalLayoutProps {
     content: React.ReactNode
   }
   gallery: {
-    images: { src: string; alt: string }[]
+    media: {type: 'image' | 'video'; src: string; alt: string }[]
   }
 }
 
@@ -65,7 +65,7 @@ export function PhotoJournalLayout({ article, gallery }: PhotoJournalLayoutProps
                 <span className="ml-3">{formatDate(article.date)}</span>
               </time>
             </header>
-            <ImageGallery images={gallery.images} />
+            <ImageGallery media={gallery.media} />
             <Prose className="mt-8" data-mdx-content>
               {article.content}
             </Prose>
