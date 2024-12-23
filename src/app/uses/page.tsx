@@ -71,8 +71,8 @@ export default function Uses() {
           <Tool title="1Password" href="https://1password.com/">
             The best password management tool out there, in my opinion.
           </Tool>
-          <Tool title="Proton Unlimited" href="https://proton.me/">
-            For people who are tired of Google harvesting their data.
+          <Tool title="Proton Mail" href="https://go.getproton.me/SH1Jq">
+            For people who are tired of Google harvesting their email for data.
           </Tool>
           <Tool title="Notion" href="https://www.notion.com/">
             My everything tool. Highly recommend.
