@@ -34,6 +34,7 @@ function Tool({
   )
 }
 
+
 export const metadata = {
   title: 'Uses',
   description: 'Software I use, gadgets I love, and other things I recommend.',
@@ -78,7 +79,7 @@ export default function Uses() {
             My everything tool. Highly recommend.
           </Tool>
 
-          
+
         </ToolsSection>
         <ToolsSection title="Solopreneur">
           <Tool title="Collective" href="https://share.collective.com/DB0526">
@@ -93,8 +94,8 @@ export default function Uses() {
           <Tool title="Anytime Mailbox" href="https://anytimemailbox.referralrock.com/l/1DRAKEBALLE91/ ">
             Virtual mailbox for business owners.
           </Tool>
-          </ToolsSection>
-          <ToolsSection title="Design">
+        </ToolsSection>
+        <ToolsSection title="Design">
           <Tool title="CreativeLive" href="https://www.creativelive.com/">
             The best way to learn design, photography, and other creative skills. Especially Adobe Creative Suite.
           </Tool>
@@ -110,16 +111,16 @@ export default function Uses() {
           <Tool title="Tailwind UI" href="https://tailwindui.com/">
             If you like this site and know how to code, you can buy and customize the template from Tailwind UI, made by the creators of Tailwind CSS.
           </Tool>
-          </ToolsSection>
-          <ToolsSection title="Learn to Code">
+        </ToolsSection>
+        <ToolsSection title="Learn to Code">
           <Tool title="Launch School" href="https://launchschool.com/">
             The best way for beginners to learn to code, in my opinion. Not the fastest or easiest, but the best.
           </Tool>
           <Tool title="Scrimba" href="https://scrimba.com/">
             A great way to learn new technologies once you know the basics.
           </Tool>
-          </ToolsSection>
-          <ToolsSection title="Photography">
+        </ToolsSection>
+        <ToolsSection title="Photography">
           <Tool title="Olympus OM-5 Micro Four Thirds System Camera" href="https://amzn.to/3Dl8Apu">
             Rather than buying a fancy AI-enabled webcam, I decided to invest in a good mirrorless camera that I could use outside, in the kitchen, etc. This is the one I chose.
           </Tool>
@@ -132,24 +133,24 @@ export default function Uses() {
           <Tool title="Manfrotto Chicago Camera Backpack" href="https://amzn.to/3VNFgyo">
             High quality and great for travel. Tons of well-thought-out compartments.
           </Tool>
-          </ToolsSection>
+        </ToolsSection>
         <ToolsSection title="Cooking">
           <Tool title="Misono 10-Inch Chef's Knife" href="https://amzn.to/4fw40Ck">
             The most important tool in your kitchen. Get a good one and take care of it. I use this one.
           </Tool>
           <Tool title="Naniwa Grit #800 Sharpening Stone" href="https://amzn.to/3BCcsSp">
-              The stand isn&apos;t important (you can use a wet towel), but be sure to go #800 grit as a beginner - good for sharpening, less so for honing.
-            </Tool>
-            <Tool title="Naniwa Whetsone" href="https://amzn.to/49M15Ei">
-              Use this to flatten your sharpening stone&apos;s surface after each use.
-            </Tool>
-            <Tool title="Cutting board" href="https://amzn.to/3PlQI0B">
+            The stand isn&apos;t important (you can use a wet towel), but be sure to go #800 grit as a beginner - good for sharpening, less so for honing.
+          </Tool>
+          <Tool title="Naniwa Whetsone" href="https://amzn.to/49M15Ei">
+            Use this to flatten your sharpening stone&apos;s surface after each use.
+          </Tool>
+          <Tool title="Cutting board" href="https://amzn.to/3PlQI0B">
             Go big and bamboo here, you&apos;ll be surprised how much space you need.
           </Tool>
           <Tool title="Hexclad 12-Inch Fry Pan" href="https://amzn.to/4iExRv0">
             The price of this pan has gone way up since I bought mine. I use it almost every day and its non-stick claim is no joke, but maybe do your research and see if there&apos;s a better option.
           </Tool>
-          
+
           <Tool title="Tramontina Gourmet 8-Piece Cookware Set" href="https://www.wayfair.com/kitchen-tabletop/pdp/tramontina-tri-ply-clad-gourmet-8-pc-cookware-set-ta1099.html">
             You need a good set of pots - I don&apos;t really use the pans. I don&apos;t think brand is super important, but here&apos;s what I use. Affordable and high quality.
           </Tool>
@@ -184,8 +185,8 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Furballs">
-        <Tool title="How to Introduce A Remote Collar to Your Dog" href="https://www.youtube.com/watch?v=OTUgYi-Rq2M">
-          Tom Davis&apos; YouTube videos are a goldmine of educational content for novice dog trainers. You need to watch this before you start using a remote collar with your pup.
+          <Tool title="How to Introduce A Remote Collar to Your Dog" href="https://www.youtube.com/watch?v=OTUgYi-Rq2M">
+            Tom Davis&apos; YouTube videos are a goldmine of educational content for novice dog trainers. You need to watch this before you start using a remote collar with your pup.
           </Tool>
           <Tool title="E-Collar Technologies miniEducator" href="https://amzn.to/3BCGJk3">
             Incredible tool to help you train your dog.
