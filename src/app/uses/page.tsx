@@ -199,7 +199,7 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Do Not Recommend">
-          <Tool title="Pipedream" href="https://www.pipedream.com">
+          <Tool title="Pipedream" href="https://www.drakeballew.com/articles/no-pipedream">
             Quickly becoming commoditized product run by a negligent CEO and team.
           </Tool>
         </ToolsSection>
