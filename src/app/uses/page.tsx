@@ -54,9 +54,6 @@ export default function Uses() {
           <Tool title="ChatGPT" href="https://openai.com/">
             Super helpful for debugging code and getting quick overviews of other topics. I like to use it as a sort of Wikipedia Lite.
           </Tool>
-          <Tool title="Pipedream" href="http://pipedream.com/?via=drake">
-            A more code-friendly Zapier alternative. I use it for most of my automation flows.
-          </Tool>
           <Tool title="Airtable" href="https://airtable.com/invite/r/vllZZPBS">
             Similar to Google Sheets but has better file management, which comes in handy when you&apos;re working with a lot of images and other media.
           </Tool>
@@ -190,6 +187,20 @@ export default function Uses() {
           </Tool>
           <Tool title="E-Collar Technologies miniEducator" href="https://amzn.to/3BCGJk3">
             Incredible tool to help you train your dog.
+          </Tool>
+        </ToolsSection>
+        
+        <ToolsSection title="Furballs">
+          <Tool title="How to Introduce A Remote Collar to Your Dog" href="https://www.youtube.com/watch?v=OTUgYi-Rq2M">
+            Tom Davis&apos; YouTube videos are a goldmine of educational content for novice dog trainers. You need to watch this before you start using a remote collar with your pup.
+          </Tool>
+          <Tool title="E-Collar Technologies miniEducator" href="https://amzn.to/3BCGJk3">
+            Incredible tool to help you train your dog.
+          </Tool>
+        </ToolsSection>
+        <ToolsSection title="Do Not Recommend">
+          <Tool title="Pipedream" href="https://www.pipedream.com">
+            Quickly becoming commoditized product run by a negligent CEO and team.
           </Tool>
         </ToolsSection>
       </div>
