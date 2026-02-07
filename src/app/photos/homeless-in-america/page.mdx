@@ -1,0 +1,25 @@
+import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
+import image1 from './1770502290732-67qi2qaazi7.jpg'
+
+export const article = {
+  author: 'Drake Ballew',
+  date: '2026-02-07',
+  title: 'Homeless in America',
+  description: "And Mexico, briefly.",
+  published: true,
+}
+
+export const gallery = {
+  media: [
+    { src: image1 }
+  ],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+
+Man, Uncle Sam sucks a lot of cock.
