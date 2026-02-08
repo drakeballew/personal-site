@@ -5,16 +5,21 @@ import image2 from './image-2.jpg'
 
 export const article = {
   author: 'Drake Ballew',
-  date: '2026-02-08',
+  date: 'Sept 2025 - Present',
   title: 'Homeless in America',
   description: "And Mexico, briefly.",
-  published: true,
+  content: (
+    <div>
+<p>Man, Uncle Sam sucks a lot of cock.</p>
+      <h1>Like, a <strong>LOT</strong> of cock.</h1>
+    </div>
+  ),
 }
 
 export const gallery = {
   media: [
-    { src: image1 },
-    { src: image2 },
+    { type: "image", src: image1.src, alt: 'Image 1' },
+    { type: "image", src: image2.src, alt: 'Image 2' },
   ],
 }
 
@@ -24,7 +29,3 @@ export const metadata = {
 }
 
 export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
-
-Man, Uncle Sam sucks a lot of cock.
-
-# Like, a **LOT** of cock.
