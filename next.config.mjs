@@ -4,6 +4,15 @@ import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'eswifictxaqqdvlogbrp.supabase.co',
+        pathname: '/storage/v1/object/public/**',
+      },
+    ],
+  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   experimental: {
     outputFileTracingIncludes: {
