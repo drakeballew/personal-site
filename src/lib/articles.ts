@@ -1,4 +1,4 @@
-import glob from 'fast-glob'
+import { loadContentEntries } from '@/lib/content'
 
 interface Article {
   title: string
@@ -12,28 +12,14 @@ export interface ArticleWithSlug extends Article {
   slug: string
 }
 
-async function importArticle(
-  articleFilename: string,
-): Promise<ArticleWithSlug> {
-  let { article } = (await import(`../app/articles/${articleFilename}`)) as {
-    default: React.ComponentType
-    article: Article
-  }
-
-  return {
-    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
-    ...article,
-  }
-}
-
 export async function getAllArticles() {
-  let articleFilenames = await glob('*/page.mdx', {
+  return loadContentEntries<ArticleWithSlug>({
     cwd: './src/app/articles',
+    pattern: '*/page.mdx',
+    importEntry: (filename) => import(`../app/articles/${filename}`),
+    resolve: (mod, slug) => {
+      const { article } = mod as { article: Article }
+      return { slug, ...article }
+    },
   })
-
-  let articles = await Promise.all(articleFilenames.map(importArticle))
-  
-  return articles
-    .filter(article => article.published)
-    .sort((a, z) => +new Date(z.date) - +new Date(a.date))
 }
