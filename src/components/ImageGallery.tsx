@@ -49,51 +49,66 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
   })
 
   const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-  // Vertical alignment for staggered polaroid look: alternate top/center/bottom
-  const alignments = ['self-start', 'self-center', 'self-end'] as const
+  const ROWS = 3
+
+  // Distribute media round-robin across 3 rows
+  const rows = Array.from({ length: ROWS }, () => [] as { item: (typeof media)[0]; originalIndex: number }[])
+  media.forEach((item, i) => {
+    rows[i % ROWS].push({ item, originalIndex: i })
+  })
 
   return (
     <>
       <div className="-mx-4 mt-8 overflow-x-auto py-4 sm:-mx-6">
-        <div className="flex min-h-[10rem] flex-nowrap items-end gap-4 px-4 sm:min-h-[12rem] sm:gap-6 sm:px-6">
-          {media.map((item, i) => (
+        <div className="flex flex-col gap-4 px-4 sm:gap-6 sm:px-6">
+          {rows.map((row, rowIndex) => (
             <div
-              key={i}
-              className={clsx(
-                'relative aspect-[9/10] w-24 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-40 sm:rounded-2xl dark:bg-zinc-800',
-                rotations[i % rotations.length],
-                alignments[i % alignments.length]
-              )}
-              onClick={() => {
-                setIndex(i)
-                setOpen(true)
-              }}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  setIndex(i)
-                  setOpen(true)
-                }
-              }}
-              aria-label={`View ${item.alt}`}
+              key={rowIndex}
+              className="flex flex-nowrap gap-4 sm:gap-6"
             >
-              {item.type === 'image' ? (
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              ) : item.type === 'video' ? (
-                <video
-                  controls
-                  className="absolute inset-0 h-full w-full object-cover"
-                >
-                  <source src={item.src} type={getVideoType(item.src)} />
-                  Your browser does not support the video tag.
-                </video>
-              ) : null}
+              {row.map(({ item, originalIndex }, indexInRow) => {
+                const rotationOffset = rowIndex % 2
+                const rotation = rotations[(rotationOffset + indexInRow) % rotations.length]
+                return (
+                  <div
+                    key={originalIndex}
+                    className={clsx(
+                      'relative aspect-[9/10] w-24 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-40 sm:rounded-2xl dark:bg-zinc-800',
+                      rotation
+                    )}
+                    onClick={() => {
+                      setIndex(originalIndex)
+                      setOpen(true)
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        setIndex(originalIndex)
+                        setOpen(true)
+                      }
+                    }}
+                    aria-label={`View ${item.alt}`}
+                  >
+                    {item.type === 'image' ? (
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : item.type === 'video' ? (
+                      <video
+                        controls
+                        className="absolute inset-0 h-full w-full object-cover"
+                      >
+                        <source src={item.src} type={getVideoType(item.src)} />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : null}
+                  </div>
+                )
+              })}
             </div>
           ))}
         </div>
