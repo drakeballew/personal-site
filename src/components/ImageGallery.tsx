@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import clsx from 'clsx'
 import Lightbox from 'yet-another-react-lightbox'
 import Captions from 'yet-another-react-lightbox/plugins/captions'
 import Video from 'yet-another-react-lightbox/plugins/video'
@@ -47,42 +48,52 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
     }
   })
 
+  const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+
   return (
     <>
-      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {media.map((item, i) => (
-          <div
-            key={i}
-            className="cursor-pointer overflow-hidden rounded-lg shadow-lg transition hover:opacity-90"
-            onClick={() => {
-              setIndex(i)
-              setOpen(true)
-            }}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault()
+      <div className="-mx-4 mt-8 overflow-x-auto py-4 sm:-mx-6">
+        <div className="flex flex-nowrap gap-5 px-4 sm:gap-8 sm:px-6">
+          {media.map((item, i) => (
+            <div
+              key={i}
+              className={clsx(
+                'relative aspect-[9/10] w-44 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+                rotations[i % rotations.length]
+              )}
+              onClick={() => {
                 setIndex(i)
                 setOpen(true)
-              }
-            }}
-            aria-label={`View ${item.alt}`}
-          >
-            {item.type === 'image' ? (
-              <img
-                src={item.src}
-                alt={item.alt}
-                className="w-full h-full object-cover"
-              />
-            ) : item.type === 'video' ? (
-              <video controls className="w-full h-auto object-cover">
-                <source src={item.src} type={getVideoType(item.src)} />
-                Your browser does not support the video tag.
-              </video>
-            ) : null}
-          </div>
-        ))}
+              }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  setIndex(i)
+                  setOpen(true)
+                }
+              }}
+              aria-label={`View ${item.alt}`}
+            >
+              {item.type === 'image' ? (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : item.type === 'video' ? (
+                <video
+                  controls
+                  className="absolute inset-0 h-full w-full object-cover"
+                >
+                  <source src={item.src} type={getVideoType(item.src)} />
+                  Your browser does not support the video tag.
+                </video>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </div>
       <Lightbox
         open={open}
