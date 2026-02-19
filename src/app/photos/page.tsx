@@ -52,6 +52,8 @@ export const metadata: Metadata = {
     'Visual stories from my travels around the world.',
 }
 
+const SECTION_ORDER = ['Asia', 'North America', 'Europe', 'South America', 'Africa', 'Oceania', 'Other']
+
 export default async function Photos() {
   const photoJournals = await getAllPhotoJournals()
   const appearances = photoJournals.map((pj) => ({
@@ -64,15 +66,27 @@ export default async function Photos() {
     published: pj.published ?? true,
   }))
 
+  const sections = [
+    ...new Set(appearances.map((a) => a.section).filter(Boolean)),
+  ].sort(
+    (a, b) =>
+      (SECTION_ORDER.indexOf(a) === -1 ? 999 : SECTION_ORDER.indexOf(a)) -
+      (SECTION_ORDER.indexOf(b) === -1 ? 999 : SECTION_ORDER.indexOf(b))
+  )
+
   return (
     <SimpleLayout
       title="Photos"
       intro="Visual stories from my travels around the world. Each album captures the moments, people, and places that made each journey memorable."
     >
       <div className="space-y-20">
-        <PhotosSection title="Asia" appearances={appearances} />
-        <PhotosSection title="North America" appearances={appearances} />
-        <PhotosSection title="Europe" appearances={appearances} />
+        {sections.map((section) => (
+          <PhotosSection
+            key={section}
+            title={section}
+            appearances={appearances}
+          />
+        ))}
       </div>
     </SimpleLayout>
   )
