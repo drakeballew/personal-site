@@ -1,0 +1,31 @@
+/* Lightbox theme: zinc/teal to match site aesthetic */
+
+/* Captions - zinc text on dark overlay */
+.yarl__root {
+  --yarl__slide_captions_container_background: rgba(24, 24, 27, 0.85);
+  --yarl__slide_title_color: #f4f4f5;
+  --yarl__slide_description_color: #a1a1aa;
+}
+
+/* Thumbnails - zinc container, teal active state */
+.yarl__root {
+  --yarl__thumbnails_container_background_color: rgba(24, 24, 27, 0.95);
+  --yarl__thumbnails_thumbnail_background: #18181b;
+  --yarl__thumbnails_thumbnail_border_color: rgba(82, 82, 91, 0.8);
+  --yarl__thumbnails_thumbnail_active_border_color: #14b8a6;
+  --yarl__thumbnails_thumbnail_border_radius: 6px;
+  --yarl__thumbnails_thumbnail_focus_box_shadow: 0 0 0 2px #18181b, 0 0 0 4px #14b8a6;
+}
+
+/* Buttons and controls - zinc default, teal on hover/active */
+.yarl__root {
+  --yarl__color_button: rgba(161, 161, 170, 0.9);
+  --yarl__color_button_active: #2dd4bf;
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.9);
+}
+
+/* Dark mode: slightly brighter teal accent for better contrast */
+.dark .yarl__root {
+  --yarl__color_button_active: #2dd4bf;
+  --yarl__thumbnails_thumbnail_active_border_color: #2dd4bf;
+}
