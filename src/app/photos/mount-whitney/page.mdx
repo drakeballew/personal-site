@@ -1,32 +1,11 @@
 import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
 
-import image1 from './image-1.jpg'
-import image2 from './image-2.jpg'
-import image3 from './image-3.jpg'
-import image4 from './image-4.jpg'
-import image5 from './image-5.jpg'
-import image6 from './image-6.jpg'
-import image7 from './image-7.jpg'
-import image8 from './image-8.jpg'
-import image9 from './image-9.jpg'
-import image10 from './image-10.jpg'
-import image11 from './image-11.jpg'
-import image12 from './image-12.jpg'
-import image13 from './image-13.jpg'
-import image15 from './image-15.jpg'
-import image16 from './image-16.jpg'
-import image17 from './image-17.jpg'
-import image18 from './image-18.jpg'
-import image19 from './image-19.jpg'
-import image20 from './image-20.jpg'
-import image21 from './image-21.jpg'
-import image22 from './image-22.jpg'
-
 export const article = {
   author: 'Drake Ballew',
   date: '2019-10-30',
   title: 'Playa Saladita',
   description: "Playa Saladita",
+  section: 'North America',
   content: (
     <div>
       <p>
@@ -38,27 +17,27 @@ export const article = {
 
 export const gallery = {
   media: [
-    { type: "image", src: image1.src, alt: 'Description for image 1' },
-    { type: "image", src: image2.src, alt: 'Description for image 2' },
-    { type: "image", src: image3.src, alt: 'Description for image 3' },
-    { type: "image", src: image4.src, alt: 'Description for image 4' },
-    { type: "image", src: image5.src, alt: 'Description for image 5' },
-    { type: "image", src: image6.src, alt: 'Description for image 6' },
-    { type: "image", src: image7.src, alt: 'Description for image 7' },
-    { type: "image", src: image8.src, alt: 'Description for image 8' },
-    { type: "image", src: image9.src, alt: 'Description for image 9' },
-    { type: "image", src: image10.src, alt: 'Description for image 10' },
-    { type: "image", src: image11.src, alt: 'Description for image 11' },
-    { type: "image", src: image12.src, alt: 'Description for image 12' },
-    { type: "image", src: image13.src, alt: 'Description for image 13' },
-    { type: "image", src: image15.src, alt: 'Description for image 15' },
-    { type: "image", src: image16.src, alt: 'Description for image 16' },
-    { type: "image", src: image17.src, alt: 'Description for image 17' },
-    { type: "image", src: image18.src, alt: 'Description for image 18' },
-    { type: "image", src: image19.src, alt: 'Description for image 19' },
-    { type: "image", src: image20.src, alt: 'Description for image 20' },
-    { type: "image", src: image21.src, alt: 'Description for image 21' },
-    { type: "image", src: image22.src, alt: 'Description for image 22' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-1.jpg', alt: 'Description for image 1' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-2.jpg', alt: 'Description for image 2' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-3.jpg', alt: 'Description for image 3' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-4.jpg', alt: 'Description for image 4' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-5.jpg', alt: 'Description for image 5' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-6.jpg', alt: 'Description for image 6' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-7.jpg', alt: 'Description for image 7' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-8.jpg', alt: 'Description for image 8' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-9.jpg', alt: 'Description for image 9' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-10.jpg', alt: 'Description for image 10' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-11.jpg', alt: 'Description for image 11' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-12.jpg', alt: 'Description for image 12' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-13.jpg', alt: 'Description for image 13' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-15.jpg', alt: 'Description for image 15' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-16.jpg', alt: 'Description for image 16' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-17.jpg', alt: 'Description for image 17' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-18.jpg', alt: 'Description for image 18' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-19.jpg', alt: 'Description for image 19' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-20.jpg', alt: 'Description for image 20' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-21.jpg', alt: 'Description for image 21' },
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-22.jpg', alt: 'Description for image 22' },
   ],
 }
 
