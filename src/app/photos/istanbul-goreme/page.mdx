@@ -1,0 +1,23 @@
+import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
+
+export const article = {
+  author: 'Drake Ballew',
+  date: '2023-11-28',
+  tripDate: 'Nov - Dec 2023',
+  title: 'Istanbul & Goreme',
+  description: "Definitely the best breakfast I've ever had on the road. Istanbul was pretty cool too!",
+  section: 'Asia',
+}
+
+export const gallery = {
+  media: [
+    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/media/1771542415537-uon8o5cyl1j.MOV', alt: 'Turkish breakfast spread, Istanbul' },
+  ],
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
