@@ -49,51 +49,70 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
   })
 
   const rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  const ROWS = 3
+
+  // Distribute media round-robin across 3 rows
+  const rows = Array.from({ length: ROWS }, () => [] as { item: (typeof media)[0]; originalIndex: number }[])
+  media.forEach((item, i) => {
+    rows[i % ROWS].push({ item, originalIndex: i })
+  })
 
   return (
     <>
-      <div className="-mx-4 mt-8 overflow-x-auto py-4 sm:-mx-6">
-        <div className="flex flex-nowrap gap-5 px-4 sm:gap-8 sm:px-6">
-          {media.map((item, i) => (
-            <div
-              key={i}
-              className={clsx(
-                'relative aspect-[9/10] w-44 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-                rotations[i % rotations.length]
-              )}
-              onClick={() => {
-                setIndex(i)
-                setOpen(true)
-              }}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  setIndex(i)
-                  setOpen(true)
-                }
-              }}
-              aria-label={`View ${item.alt}`}
-            >
-              {item.type === 'image' ? (
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              ) : item.type === 'video' ? (
-                <video
-                  controls
-                  className="absolute inset-0 h-full w-full object-cover"
-                >
-                  <source src={item.src} type={getVideoType(item.src)} />
-                  Your browser does not support the video tag.
-                </video>
-              ) : null}
+      <div className="-mx-4 mt-8 space-y-6 py-4 sm:-mx-6">
+        {rows.map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className="overflow-x-auto"
+          >
+            <div className="flex flex-nowrap gap-5 px-4 sm:gap-8 sm:px-6">
+              {row.map(({ item, originalIndex }, indexInRow) => {
+                // Alternating rows start with opposite rotation offsets to avoid column alignment
+                const rotationOffset = rowIndex % 2
+                const rotation = rotations[(rotationOffset + indexInRow) % rotations.length]
+                return (
+                  <div
+                    key={originalIndex}
+                    className={clsx(
+                      'relative aspect-[9/10] w-44 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+                      rotation
+                    )}
+                    onClick={() => {
+                      setIndex(originalIndex)
+                      setOpen(true)
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        setIndex(originalIndex)
+                        setOpen(true)
+                      }
+                    }}
+                    aria-label={`View ${item.alt}`}
+                  >
+                    {item.type === 'image' ? (
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : item.type === 'video' ? (
+                      <video
+                        controls
+                        className="absolute inset-0 h-full w-full object-cover"
+                      >
+                        <source src={item.src} type={getVideoType(item.src)} />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : null}
+                  </div>
+                )
+              })}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
       <Lightbox
         open={open}
