@@ -59,7 +59,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
 
   return (
     <>
-      <div className="-mx-4 mt-8 overflow-x-auto py-4 sm:-mx-6">
+      <div className="scrollbar-minimal -mx-4 mt-8 overflow-x-auto py-4 sm:-mx-6">
         <div className="flex flex-col gap-4 px-4 sm:gap-6 sm:px-6">
           {rows.map((row, rowIndex) => (
             <div
