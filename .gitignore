@@ -33,3 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# photo journal images (served from Supabase)
+src/app/photos/**/*.jpg
+src/app/photos/**/*.jpeg
+src/app/photos/**/*.JPG
+src/app/photos/**/*.png
+src/app/photos/**/*.gif
