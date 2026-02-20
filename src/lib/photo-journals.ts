@@ -22,7 +22,7 @@ export interface PhotoJournalWithSlug {
 }
 
 export async function getAllPhotoJournals() {
-  return loadContentEntries<PhotoJournalWithSlug>({
+  const entries = await loadContentEntries<PhotoJournalWithSlug>({
     cwd: './src/app/photos',
     pattern: '*/page.mdx',
     importEntry: (filename) => import(`../app/photos/${filename}`),
@@ -36,4 +36,5 @@ export async function getAllPhotoJournals() {
       }
     },
   })
+  return entries.sort((a, z) => +new Date(a.date) - +new Date(z.date))
 }
