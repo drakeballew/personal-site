@@ -75,8 +75,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
           marginBottom: theme('spacing.10'),
         },
         p: {
-          marginTop: theme('spacing.7'),
-          marginBottom: theme('spacing.7'),
+          marginTop: theme('spacing.8'),
+          marginBottom: theme('spacing.8'),
         },
 
         // Headings
