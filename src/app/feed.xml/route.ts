@@ -2,6 +2,8 @@ import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
+import { getArticles } from '@/lib/articles'
+
 export async function GET(req: Request) {
   let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 
@@ -28,11 +30,8 @@ export async function GET(req: Request) {
     },
   })
 
-  let articleIds = require
-    .context('../articles', true, /\/page\.mdx$/)
-    .keys()
-    .filter((key) => key.startsWith('./'))
-    .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''))
+  const articles = await getArticles()
+  const articleIds = articles.map((a) => a.slug)
 
   for (let id of articleIds) {
     let url = String(new URL(`/articles/${id}`, req.url))

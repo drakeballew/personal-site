@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type PoemWithSlug, getAllPoems } from '@/lib/poems'
+import { type PoemWithSlug, getPoems } from '@/lib/poems'
 import { formatDate } from '@/lib/formatDate'
 
 export const metadata: Metadata = {
@@ -11,34 +11,41 @@ export const metadata: Metadata = {
 }
 
 function Poem({ poem }: { poem: PoemWithSlug }) {
+  const dateFormatted = formatDate(poem.date)
+  const hasDate = !!dateFormatted && !!poem.date.trim()
+
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
         <Card.Title href={`/poems/${poem.slug}`}>{poem.title}</Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={poem.date}
-          className="md:hidden"
-          decorate
-        >
-          {formatDate(poem.date)}
-        </Card.Eyebrow>
+        {hasDate && (
+          <Card.Eyebrow
+            as="time"
+            dateTime={poem.date}
+            className="md:hidden"
+            decorate
+          >
+            {dateFormatted}
+          </Card.Eyebrow>
+        )}
         <Card.Description>{poem.description}</Card.Description>
         <Card.Cta>Read poem</Card.Cta>
       </Card>
-      <Card.Eyebrow
-        as="time"
-        dateTime={poem.date}
-        className="mt-1 hidden md:block"
-      >
-        {formatDate(poem.date)}
-      </Card.Eyebrow>
+      {hasDate && (
+        <Card.Eyebrow
+          as="time"
+          dateTime={poem.date}
+          className="mt-1 hidden md:block"
+        >
+          {dateFormatted}
+        </Card.Eyebrow>
+      )}
     </article>
   )
 }
 
 export default async function PoemsIndex() {
-  const poems = await getAllPoems()
+  const poems = await getPoems()
 
   return (
     <SimpleLayout

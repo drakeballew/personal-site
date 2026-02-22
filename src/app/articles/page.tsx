@@ -1,10 +1,10 @@
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { type ArticleWithSlug, getArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 async function fetchArticles() {
-  const articles = await getAllArticles()
+  const articles = await getArticles()
   return articles
 }
 

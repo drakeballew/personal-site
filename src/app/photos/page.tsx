@@ -3,7 +3,7 @@ import { type Metadata } from 'next'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { AlbumsBySection } from '@/components/AlbumsBySection'
 import { FeedBlock } from '@/components/FeedBlock'
-import { getAllPhotoJournals } from '@/lib/photo-journals'
+import { getPhotoJournals } from '@/lib/photo-journals'
 import { getFeedPhotosPage } from '@/lib/feed'
 
 const FEED_PAGE_SIZE = 24
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default async function Photos() {
   const [photoJournals, feedPage] = await Promise.all([
-    getAllPhotoJournals(),
+    getPhotoJournals(),
     getFeedPhotosPage('desc', FEED_PAGE_SIZE, 0).catch(() => ({ data: [], hasMore: false })),
   ])
 
