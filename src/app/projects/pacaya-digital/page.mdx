@@ -1,0 +1,18 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+
+
+export const project = {
+  name: 'Pacaya Digital',
+  description: "Solopreneur Growth consultancy.",
+  link: { href: 'https://www.pacaya.io', label: 'pacaya.io' },
+  
+  
+  published: true,
+}
+
+export const metadata = {
+  title: project.name,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />

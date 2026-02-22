@@ -1,0 +1,18 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+
+
+export const project = {
+  name: 'Practice Health',
+  description: "Mental healthcare for beginners.",
+  link: { href: 'https://practicehealth.webflow.io/', label: 'practicehealth.webflow.io' },
+  
+  
+  published: true,
+}
+
+export const metadata = {
+  title: project.name,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />

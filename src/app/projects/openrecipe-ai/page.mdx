@@ -1,0 +1,18 @@
+import { ProjectLayout } from '@/components/ProjectLayout'
+
+
+export const project = {
+  name: 'OpenRecipe.ai',
+  description: "Machine learning to help you cook better.",
+  link: { href: 'https://www.openrecipe.ai', label: 'openrecipe.ai' },
+  github: 'http://github.com/openrecipeai/omakase/settings',
+  
+  published: true,
+}
+
+export const metadata = {
+  title: project.name,
+  description: project.description,
+}
+
+export default (props) => <ProjectLayout project={project} {...props} />
