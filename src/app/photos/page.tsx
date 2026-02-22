@@ -31,8 +31,8 @@ export default async function Photos() {
 
   return (
     <SimpleLayout
-      title="Photos"
-      intro="Visual stories from my travels around the world. Choose a section above to see albums; the feed is below."
+      title="Visual Memories"
+      intro="Stories from my life and travels around the world; albums for trips, feed for daily minutiae."
     >
       <AlbumsBySection albums={albums} />
       <FeedBlock initialPhotos={feedPage.data} initialHasMore={feedPage.hasMore} />
