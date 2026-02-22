@@ -15,16 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/homeless-in-america/image-1.jpg', alt: 'Image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/homeless-in-america/image-2.jpg', alt: 'Image 2' },
-  ],
-}
+export const slug = 'homeless-in-america'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

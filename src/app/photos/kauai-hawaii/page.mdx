@@ -15,42 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-1.jpg', alt: 'Description for image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-2.jpg', alt: 'Description for image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-3.jpg', alt: 'Description for image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-4.jpg', alt: 'Description for image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-5.jpg', alt: 'Description for image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-6.jpg', alt: 'Description for image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-7.jpg', alt: 'Description for image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-8.jpg', alt: 'Description for image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-9.jpg', alt: 'Description for image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-10.jpg', alt: 'Description for image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-11.jpg', alt: 'Description for image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-12.jpg', alt: 'Description for image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-13.jpg', alt: 'Description for image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-14.jpg', alt: 'Description for image 14' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-15.jpg', alt: 'Description for image 15' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-16.jpg', alt: 'Description for image 16' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-17.jpg', alt: 'Description for image 17' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-18.jpg', alt: 'Description for image 18' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-19.jpg', alt: 'Description for image 19' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-20.jpg', alt: 'Description for image 20' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-21.jpg', alt: 'Description for image 21' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-22.jpg', alt: 'Description for image 22' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-23.jpg', alt: 'Description for image 23' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-24.jpg', alt: 'Description for image 24' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-25.jpg', alt: 'Description for image 25' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-26.jpg', alt: 'Description for image 26' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-27.jpg', alt: 'Description for image 27' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/kauai-hawaii/image-28.jpg', alt: 'Description for image 28' },
-  ],
-}
+export const slug = 'kauai-hawaii'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

@@ -9,34 +9,11 @@ export const article = {
   section: 'Asia',
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-1.jpg', alt: 'Image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-2.jpg', alt: 'Image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-3.jpg', alt: 'Image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-4.jpg', alt: 'Image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-5.jpg', alt: 'Image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-6.jpg', alt: 'Image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-7.jpg', alt: 'Image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-8.jpg', alt: 'Image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-9.jpg', alt: 'Image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-10.jpg', alt: 'Image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-11.jpg', alt: 'Image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-12.jpg', alt: 'Image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-13.jpg', alt: 'Image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-14.jpg', alt: 'Image 14' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-15.jpg', alt: 'Image 15' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-16.jpg', alt: 'Image 16' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-17.jpg', alt: 'Image 17' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-18.jpg', alt: 'Image 18' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-19.jpg', alt: 'Image 19' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/nepal/image-20.jpg', alt: 'Image 20' },
-  ],
-}
+export const slug = 'nepal'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

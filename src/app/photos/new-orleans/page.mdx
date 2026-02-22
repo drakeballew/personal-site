@@ -9,28 +9,11 @@ export const article = {
   section: 'North America',
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-1.jpg', alt: 'Image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-2.jpg', alt: 'Image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-3.jpg', alt: 'Image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-4.jpg', alt: 'Image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-5.jpg', alt: 'Image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-6.jpg', alt: 'Image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-7.jpg', alt: 'Image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-8.jpg', alt: 'Image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-9.jpg', alt: 'Image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-10.jpg', alt: 'Image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-11.jpg', alt: 'Image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-12.jpg', alt: 'Image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-13.jpg', alt: 'Image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/new-orleans/image-14.jpg', alt: 'Image 14' },
-  ],
-}
+export const slug = 'new-orleans'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

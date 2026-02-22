@@ -15,15 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  images: [
-    
-  ],
-}
+export const slug = 'portland'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

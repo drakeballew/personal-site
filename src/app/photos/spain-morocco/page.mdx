@@ -9,38 +9,11 @@ export const article = {
   section: 'Europe',
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-1.jpg', alt: 'Image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-2.jpg', alt: 'Image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-3.jpg', alt: 'Image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-4.jpg', alt: 'Image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-5.jpg', alt: 'Image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-6.jpg', alt: 'Image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-7.jpg', alt: 'Image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-8.jpg', alt: 'Image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-9.jpg', alt: 'Image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-10.jpg', alt: 'Image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-11.jpg', alt: 'Image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-12.jpg', alt: 'Image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-13.jpg', alt: 'Image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-14.jpg', alt: 'Image 14' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-15.jpg', alt: 'Image 15' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-16.jpg', alt: 'Image 16' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-17.jpg', alt: 'Image 17' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-18.jpg', alt: 'Image 18' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-19.jpg', alt: 'Image 19' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-20.jpg', alt: 'Image 20' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-21.jpg', alt: 'Image 21' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-22.jpg', alt: 'Image 22' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-23.jpg', alt: 'Image 23' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/spain-morocco/image-24.jpg', alt: 'Image 24' },
-  ],
-}
+export const slug = 'spain-morocco'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

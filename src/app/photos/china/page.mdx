@@ -31,29 +31,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-1.jpg', alt: 'Cycling around Qinghai Lake' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-2.jpg', alt: 'Masked up on the Tibetan Plateau' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-3.jpg', alt: 'Flying kites on the ancient city walls of Nanjing' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-4.jpg', alt: 'Traversing dilapidated sections of the Great Wall ' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-5.jpg', alt: 'Sun Yat Sen Mausoleum on a rainy day' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-6.jpg', alt: 'Architecture of Langmusi, Sichuan' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-7.jpg', alt: 'Young monks at Labrang Monastery, Xiahe' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-8.jpg', alt: 'Horses grazing the hills of Sichuan' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-9.jpg', alt: 'Yours truly in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-10.jpg', alt: 'Temple protectors in Beijing' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-11.jpg', alt: 'Beijing\'s hutongs' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-12.jpg', alt: 'A bird made of honey' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-13.jpg', alt: 'Momos' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-14.jpg', alt: 'Vaaaaaaal at the Summer Palace' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/china/image-15.jpg', alt: 'Lijiang at dawn' },
-  ],
-}
+export const slug = 'china'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

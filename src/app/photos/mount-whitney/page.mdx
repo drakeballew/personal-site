@@ -3,8 +3,8 @@ import { PhotoJournalLayout } from '@/components/PhotoJournalLayout'
 export const article = {
   author: 'Drake Ballew',
   date: '2019-10-30',
-  title: 'Playa Saladita',
-  description: "Playa Saladita",
+  title: 'Mount Whitney',
+  description: "Summiting Mt Whitney with Ben",
   section: 'North America',
   content: (
     <div>
@@ -15,35 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-1.jpg', alt: 'Description for image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-2.jpg', alt: 'Description for image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-3.jpg', alt: 'Description for image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-4.jpg', alt: 'Description for image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-5.jpg', alt: 'Description for image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-6.jpg', alt: 'Description for image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-7.jpg', alt: 'Description for image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-8.jpg', alt: 'Description for image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-9.jpg', alt: 'Description for image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-10.jpg', alt: 'Description for image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-11.jpg', alt: 'Description for image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-12.jpg', alt: 'Description for image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-13.jpg', alt: 'Description for image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-15.jpg', alt: 'Description for image 15' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-16.jpg', alt: 'Description for image 16' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-17.jpg', alt: 'Description for image 17' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-18.jpg', alt: 'Description for image 18' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-19.jpg', alt: 'Description for image 19' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-20.jpg', alt: 'Description for image 20' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-21.jpg', alt: 'Description for image 21' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/mount-whitney/image-22.jpg', alt: 'Description for image 22' },
-  ],
-}
+export const slug = 'mount-whitney'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />
