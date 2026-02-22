@@ -15,28 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-1.jpg', alt: 'Description for image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-2.jpg', alt: 'Description for image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-3.jpg', alt: 'Description for image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-4.jpg', alt: 'Description for image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-5.jpg', alt: 'Description for image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-6.jpg', alt: 'Description for image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-7.jpg', alt: 'Description for image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-8.jpg', alt: 'Description for image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-9.jpg', alt: 'Description for image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-10.jpg', alt: 'Description for image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-11.jpg', alt: 'Description for image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-12.jpg', alt: 'Description for image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-13.jpg', alt: 'Description for image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/oahu-hawaii/image-15.jpg', alt: 'Description for image 15' },
-  ],
-}
+export const slug = 'oahu-hawaii'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

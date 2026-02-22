@@ -1,50 +1,12 @@
 import { type Metadata } from 'next'
 
-import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { AlbumsBySection } from '@/components/AlbumsBySection'
+import { FeedBlock } from '@/components/FeedBlock'
 import { getAllPhotoJournals } from '@/lib/photo-journals'
+import { getFeedPhotosPage } from '@/lib/feed'
 
-function PhotosSection({
-  title,
-  appearances,
-}: {
-  title: string
-  appearances: Array<{
-    href: string
-    title: string
-    description: string
-    tripDate: string
-    cta: string
-    section: string
-    published: boolean
-  }>
-}) {
-  const sectionAppearances = appearances.filter((a) => a.section === title)
-
-  if (sectionAppearances.length === 0) {
-    return null
-  }
-
-  return (
-    <div className="space-y-8">
-      <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-        {title}
-      </h2>
-      <div className="space-y-16">
-        {sectionAppearances.map((appearance) => (
-          <Card as="article" key={appearance.href}>
-            <Card.Title as="h3" href={appearance.href}>
-              {appearance.title}
-            </Card.Title>
-            <Card.Eyebrow decorate>{appearance.tripDate}</Card.Eyebrow>
-            <Card.Description>{appearance.description}</Card.Description>
-            <Card.Cta>{appearance.cta}</Card.Cta>
-          </Card>
-        ))}
-      </div>
-    </div>
-  )
-}
+const FEED_PAGE_SIZE = 24
 
 export const metadata: Metadata = {
   title: 'Photos',
@@ -52,42 +14,28 @@ export const metadata: Metadata = {
     'Visual stories from my travels around the world.',
 }
 
-const SECTION_ORDER = ['Asia', 'North America', 'Europe', 'South America', 'Africa', 'Oceania', 'Other']
-
 export default async function Photos() {
-  const photoJournals = await getAllPhotoJournals()
-  const appearances = photoJournals.map((pj) => ({
-    href: `/photos/${pj.slug}`,
-    title: pj.title,
-    description: pj.description,
-    tripDate: pj.tripDate ?? '',
-    cta: 'View photos',
-    section: pj.section,
-    published: pj.published ?? true,
-  }))
+  const [photoJournals, feedPage] = await Promise.all([
+    getAllPhotoJournals(),
+    getFeedPhotosPage('desc', FEED_PAGE_SIZE, 0).catch(() => ({ data: [], hasMore: false })),
+  ])
 
-  const sections = [
-    ...new Set(appearances.map((a) => a.section).filter(Boolean)),
-  ].sort(
-    (a, b) =>
-      (SECTION_ORDER.indexOf(a) === -1 ? 999 : SECTION_ORDER.indexOf(a)) -
-      (SECTION_ORDER.indexOf(b) === -1 ? 999 : SECTION_ORDER.indexOf(b))
-  )
+  const albums: { slug: string; title: string; description: string; tripDate?: string; section: string }[] =
+    photoJournals.map((pj) => ({
+      slug: pj.slug,
+      title: pj.title,
+      description: pj.description,
+      tripDate: pj.tripDate ?? undefined,
+      section: pj.section,
+    }))
 
   return (
     <SimpleLayout
       title="Photos"
-      intro="Visual stories from my travels around the world. Each album captures the moments, people, and places that made each journey memorable."
+      intro="Visual stories from my travels around the world. Choose a section above to see albums; the feed is below."
     >
-      <div className="space-y-20">
-        {sections.map((section) => (
-          <PhotosSection
-            key={section}
-            title={section}
-            appearances={appearances}
-          />
-        ))}
-      </div>
+      <AlbumsBySection albums={albums} />
+      <FeedBlock initialPhotos={feedPage.data} initialHasMore={feedPage.hasMore} />
     </SimpleLayout>
   )
 }

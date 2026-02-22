@@ -15,29 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-1.jpg', alt: 'On the shore of Qinghai Lake' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-2.jpg', alt: 'Covered up from the Tibetan Plateau sun' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-3.jpg', alt: 'Flying a kite on the Nanjing city walls' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-4.jpg', alt: 'Hiking a dilapidated section of The Great Wall' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-5.jpg', alt: 'Sun Yat Sen\'s Mausoleum on a rainy day' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-6.jpg', alt: 'A small hillside temple in Sichuan' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-7.jpg', alt: 'Young monks outside Labrang Monastery' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-8.jpg', alt: 'Horses taking a break in the fields of Gansu Province' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-9.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-10.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-11.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-12.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-13.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-14.jpg', alt: 'All smiles in Urumqi' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/central-america/image-15.jpg', alt: 'All smiles in Urumqi' },
-  ],
-}
+export const slug = 'central-america'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

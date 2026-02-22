@@ -15,23 +15,11 @@ export const article = {
   ),
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-1.jpg', alt: 'On the shore of Qinghai Lake' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-2.jpg', alt: 'Covered up from the Tibetan Plateau sun' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-3.jpg', alt: 'Flying a kite on the Nanjing city walls' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-4.jpg', alt: 'Hiking a dilapidated section of The Great Wall' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-5.jpg', alt: 'Sun Yat Sen\'s Mausoleum on a rainy day' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-6.jpg', alt: 'A small hillside temple in Sichuan' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-7.jpg', alt: 'Young monks outside Labrang Monastery' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-8.gif', alt: 'Horses taking a break in the fields of Gansu Province' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/italy/image-9.jpg', alt: 'All smiles in Urumqi' },
-  ],
-}
+export const slug = 'italy'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />

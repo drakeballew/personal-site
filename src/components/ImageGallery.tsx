@@ -1,23 +1,11 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import clsx from 'clsx'
-import Hls from 'hls.js'
-import Lightbox, { useLightboxProps } from 'yet-another-react-lightbox'
-import Captions from 'yet-another-react-lightbox/plugins/captions'
-import Video from 'yet-another-react-lightbox/plugins/video'
-import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
-import 'yet-another-react-lightbox/styles.css'
-import 'yet-another-react-lightbox/plugins/captions.css'
-import 'yet-another-react-lightbox/plugins/thumbnails.css'
-import '@/styles/lightbox-theme.css'
+import { getVideoType, isHlsUrl, buildSlidesFromMedia, type MediaLike } from '@/lib/media-utils'
+import { MediaLightbox } from '@/components/MediaLightbox'
 
-interface Media {
-  src: string
-  alt: string
-  type: 'image' | 'video'
-  poster?: string
-}
+export type Media = MediaLike
 
 interface ImageGalleryProps {
   media: Media[]
@@ -25,73 +13,6 @@ interface ImageGalleryProps {
 
 const CARD_CLASS =
   'relative aspect-[9/10] w-24 flex-none cursor-pointer overflow-hidden rounded-xl bg-zinc-100 shadow-lg transition hover:opacity-90 sm:w-40 sm:rounded-2xl dark:bg-zinc-800'
-
-function getVideoType(src: string): string {
-  if (isHlsUrl(src)) return 'application/vnd.apple.mpegurl'
-  const ext = src.split('.').pop()?.toLowerCase()?.split('?')[0]
-  if (ext === 'mov') return 'video/mp4'
-  if (ext === 'webm') return 'video/webm'
-  if (ext === 'ogg' || ext === 'ogv') return 'video/ogg'
-  return 'video/mp4'
-}
-
-function isHlsUrl(src: string): boolean {
-  return (
-    src.endsWith('.m3u8') ||
-    src.includes('cloudflarestream.com') ||
-    src.includes('/manifest/')
-  )
-}
-
-/** HLS-only: the Video plugin uses native <video> which doesn't support HLS in most browsers. */
-function HlsVideoSlide({
-  slide,
-  offset,
-}: {
-  slide: { sources: readonly { src: string }[]; width?: number; height?: number }
-  offset: number
-}) {
-  const videoRef = useRef<HTMLVideoElement>(null)
-  const hlsRef = useRef<Hls | null>(null)
-  const { video } = useLightboxProps()
-  const src = slide.sources?.[0]?.src
-
-  useEffect(() => {
-    if (!src || !videoRef.current) return
-    if (Hls.isSupported()) {
-      const hls = new Hls()
-      hlsRef.current = hls
-      hls.attachMedia(videoRef.current)
-      hls.loadSource(src)
-      return () => {
-        hls.destroy()
-        hlsRef.current = null
-      }
-    }
-    if (videoRef.current.canPlayType('application/vnd.apple.mpegurl')) {
-      videoRef.current.src = src
-      return () => {
-        videoRef.current!.src = ''
-      }
-    }
-  }, [src])
-
-  useEffect(() => {
-    if (offset === 0 && video?.autoPlay && videoRef.current) {
-      videoRef.current.play().catch(() => {})
-    }
-  }, [offset, video?.autoPlay])
-
-  return (
-    <video
-      ref={videoRef}
-      controls
-      playsInline
-      className="h-full w-full object-contain"
-      style={{ maxWidth: slide.width ?? 1280, maxHeight: slide.height ?? 720 }}
-    />
-  )
-}
 
 function FilmRollCard({
   rotation,
@@ -232,22 +153,6 @@ function FilmRollVideoCard({
   )
 }
 
-function mediaToSlides(media: Media[]) {
-  return media.map((item) =>
-    item.type === 'video'
-      ? {
-          type: 'video' as const,
-          width: 1280,
-          height: 720,
-          poster: item.poster,
-          thumbnail: item.poster,
-          sources: [{ src: item.src, type: getVideoType(item.src) }],
-          description: item.alt,
-        }
-      : { src: item.src, description: item.alt }
-  )
-}
-
 const ROTATIONS = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
 const ROWS = 3
 
@@ -263,7 +168,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
     setOpen(true)
   }
 
-  const slides = mediaToSlides(media)
+  const slides = buildSlidesFromMedia(media)
   const rows = Array.from({ length: ROWS }, () => [] as { item: (typeof media)[0]; originalIndex: number }[])
   media.forEach((item, i) => rows[i % ROWS].push({ item, originalIndex: i }))
 
@@ -298,20 +203,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ media = [] }) => {
           ))}
         </div>
       </div>
-      <Lightbox
+      <MediaLightbox
         open={open}
-        close={() => setOpen(false)}
+        onClose={() => setOpen(false)}
         index={index}
-        slides={slides as React.ComponentProps<typeof Lightbox>['slides']}
-        plugins={[Captions, Video, Thumbnails]}
-        video={{ autoPlay: true }}
-        render={{
-          slide: ({ slide, offset }) => {
-            const s = slide as { type?: string; sources?: { src: string; type: string }[]; width?: number; height?: number }
-            if (s.type !== 'video' || !s.sources?.length || !isHlsUrl(s.sources[0].src)) return undefined
-            return <HlsVideoSlide slide={{ ...s, sources: s.sources }} offset={offset} />
-          },
-        }}
+        slides={slides}
       />
     </>
   )

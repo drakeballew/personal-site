@@ -9,36 +9,11 @@ export const article = {
   section: 'North America',
 }
 
-export const gallery = {
-  media: [
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-1.jpg', alt: 'Image 1' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-2.jpg', alt: 'Image 2' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-3.jpg', alt: 'Image 3' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-4.jpg', alt: 'Image 4' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-5.jpg', alt: 'Image 5' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-6.jpg', alt: 'Image 6' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-7.jpg', alt: 'Image 7' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-8.jpg', alt: 'Image 8' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-9.jpg', alt: 'Image 9' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-10.jpg', alt: 'Image 10' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-11.jpg', alt: 'Image 11' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-12.jpg', alt: 'Image 12' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-13.jpg', alt: 'Image 13' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-14.jpg', alt: 'Image 14' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-15.jpg', alt: 'Image 15' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-16.jpg', alt: 'Image 16' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-17.jpg', alt: 'Image 17' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-18.jpg', alt: 'Image 18' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-19.jpg', alt: 'Image 19' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-20.jpg', alt: 'Image 20' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-21.jpg', alt: 'Image 21' },
-    { type: "image", src: 'https://eswifictxaqqdvlogbrp.supabase.co/storage/v1/object/public/photos/us-roadtrip-2009/image-22.jpg', alt: 'Image 22' },
-  ],
-}
+export const slug = 'us-roadtrip-2009'
 
 export const metadata = {
   title: article.title,
   description: article.description,
 }
 
-export default (props) => <PhotoJournalLayout article={article} gallery={gallery} {...props} />
+export default (props) => <PhotoJournalLayout article={article} slug={slug} {...props} />
