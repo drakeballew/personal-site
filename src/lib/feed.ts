@@ -25,7 +25,7 @@ type SortOrder = 'desc' | 'asc'
 
 const FEED_SELECT =
   'id, src, alt, type, stream_id, thumbnail, created_at, photo_date, location, city, state, country, latitude, longitude'
-const FEED_SELECT_FALLBACK = 'id, src, alt, type, stream_id, thumbnail, created_at'
+const FEED_SELECT_FALLBACK = 'id, src, alt, type, stream_id, thumbnail, created_at, photo_date'
 
 function mapRow(row: Record<string, unknown>): FeedPhotoMedia {
   return {

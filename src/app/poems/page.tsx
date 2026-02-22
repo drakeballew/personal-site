@@ -42,7 +42,11 @@ export default async function PoemsIndex() {
 
   return (
     <SimpleLayout
-      title="Poems"
+      title={
+        <>
+          <span className="line-through">Uncensored</span> Perception
+        </>
+      }
       intro="Original poetry and verse. Collected in chronological order."
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
