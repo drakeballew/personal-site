@@ -28,7 +28,9 @@ function Poem({ poem }: { poem: PoemWithSlug }) {
             {dateFormatted}
           </Card.Eyebrow>
         )}
-        <Card.Description>{poem.description}</Card.Description>
+        {poem.description != null && poem.description !== '' && (
+          <Card.Description>{poem.description}</Card.Description>
+        )}
         <Card.Cta>Read poem</Card.Cta>
       </Card>
       {hasDate && (
