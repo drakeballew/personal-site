@@ -13,7 +13,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!poem) return { title: 'Poem' }
   return {
     title: poem.title,
-    description: poem.description,
+    ...(poem.description != null && poem.description !== ''
+      ? { description: poem.description }
+      : {}),
   }
 }
 
@@ -26,6 +28,7 @@ export default async function PoemPage({ params }: Props) {
       article={{
         ...poem,
         author: poem.author ?? '',
+        description: poem.description ?? '',
       }}
     >
       <ArticleMdxContent source={poem.content ?? ''} />

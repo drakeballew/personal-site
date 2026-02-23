@@ -4,7 +4,7 @@ const GET_POEMS_URL =
 export interface PoemWithSlug {
   slug: string
   title: string
-  description: string
+  description?: string | null
   author?: string
   date: string
   published?: boolean
@@ -17,7 +17,7 @@ function mapPoem(raw: Record<string, unknown>): PoemWithSlug {
   return {
     slug: (raw.slug as string) ?? '',
     title: (raw.title as string) ?? '',
-    description: (raw.description as string) ?? (raw.excerpt as string) ?? '',
+    description: (raw.description as string) ?? (raw.excerpt as string) ?? undefined,
     author: raw.author as string | undefined,
     date: (raw.date as string) ?? '',
     published: raw.published as boolean | undefined,
