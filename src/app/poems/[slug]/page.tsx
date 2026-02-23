@@ -12,8 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const poem = await getPoemBySlug(slug)
   if (!poem) return { title: 'Poem' }
   return {
-    title: poem.title,
-    description: poem.description,
+    title: poem.title
   }
 }
 
