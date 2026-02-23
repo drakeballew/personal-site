@@ -4,7 +4,7 @@ const GET_POEMS_URL =
 export interface PoemWithSlug {
   slug: string
   title: string
-  description: string
+  description?: string
   author?: string
   date: string
   published?: boolean
