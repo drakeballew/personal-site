@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Card } from '@/components/Card'
+import { formatDate } from '@/lib/formatDate'
 
 const SECTION_ORDER = ['Asia', 'North America', 'Europe', 'South America', 'Africa', 'Oceania', 'Other']
 
@@ -10,6 +11,7 @@ export interface AlbumItem {
   slug: string
   title: string
   description: string
+  date?: string
   tripDate?: string
   section: string
 }
@@ -56,8 +58,14 @@ export function AlbumsBySection({ albums }: { albums: AlbumItem[] }) {
         <div className="mt-8 space-y-12">
           {sectionAlbums.map((album) => (
             <Card as="article" key={album.slug}>
-              {album.tripDate && (
-                <Card.Eyebrow decorate>{album.tripDate}</Card.Eyebrow>
+              {(album.tripDate || album.date) && (
+                <Card.Eyebrow
+                  as={album.date && !album.tripDate ? 'time' : undefined}
+                  dateTime={album.date && !album.tripDate ? album.date : undefined}
+                  decorate
+                >
+                  {album.tripDate ?? (album.date ? formatDate(album.date) : '')}
+                </Card.Eyebrow>
               )}
               <Card.Title as="h3" href={`/photos/${album.slug}`}>
                 {album.title}

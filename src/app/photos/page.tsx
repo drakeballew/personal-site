@@ -20,11 +20,12 @@ export default async function Photos() {
     getFeedPhotosPage('desc', FEED_PAGE_SIZE, 0).catch(() => ({ data: [], hasMore: false })),
   ])
 
-  const albums: { slug: string; title: string; description: string; tripDate?: string; section: string }[] =
+  const albums: { slug: string; title: string; description: string; date?: string; tripDate?: string; section: string }[] =
     photoJournals.map((pj) => ({
       slug: pj.slug,
       title: pj.title,
       description: pj.description,
+      date: pj.date || undefined,
       tripDate: pj.tripDate ?? undefined,
       section: pj.section,
     }))

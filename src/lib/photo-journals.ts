@@ -15,13 +15,19 @@ export interface PhotoJournalWithSlug {
 export type PhotoJournalWithContent = PhotoJournalWithSlug & { content: string }
 
 function mapPhotoJournal(raw: Record<string, unknown>): PhotoJournalWithSlug {
+  const date =
+    (raw.date as string) ??
+    (raw.published_at as string) ??
+    (raw.tripDate as string) ??
+    ''
+  const tripDate = (raw.tripDate as string) ?? (raw.published_at as string) ?? (raw.date as string)
   return {
     slug: (raw.slug as string) ?? '',
     title: (raw.title as string) ?? '',
     description: (raw.description as string) ?? (raw.excerpt as string) ?? '',
     author: raw.author as string | undefined,
-    date: (raw.date as string) ?? (raw.tripDate as string) ?? '',
-    tripDate: raw.tripDate as string | undefined,
+    date,
+    tripDate: (tripDate as string) || undefined,
     section: (raw.section as string) ?? 'Other',
     published: raw.published as boolean | undefined,
   }
