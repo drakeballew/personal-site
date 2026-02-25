@@ -100,6 +100,12 @@ export function FeedBlock({
     return () => { cancelled = true }
   }, [sortOrder])
 
+  // Sync state when server sends new initial data (e.g. after revalidation or navigation)
+  useEffect(() => {
+    setPhotos(initialPhotos)
+    setHasMore(initialHasMore)
+  }, [initialPhotos, initialHasMore])
+
   const loadMore = useCallback(() => {
     if (loading || !hasMore) return
     setLoading(true)
