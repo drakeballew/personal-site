@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 
-const ALLOWED_PATHS = ['/', '/articles', '/poems', '/projects', '/photos'] as const
+const ALLOWED_PATHS = ['/', '/articles', '/poems', '/projects', '/photos', '/uses'] as const
 
 function isValidPath(path: string): path is (typeof ALLOWED_PATHS)[number] {
   return (ALLOWED_PATHS as readonly string[]).includes(path)
